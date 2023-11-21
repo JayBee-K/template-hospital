@@ -1,0 +1,32 @@
+.header {
+	-webkit-box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.05), 0px 8px 24px -4px rgba(24, 39, 75, 0.01);
+	box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.05), 0px 8px 24px -4px rgba(24, 39, 75, 0.01);
+}
+
+.header .header-navigation {
+	background-color: var(--bs-white);
+	position: relative;
+	z-index: 2;
+}
+
+.header .header-navigation > ul {
+	position: relative;
+	list-style-type: none;
+	margin-bottom: 0;
+	padding-left: 0;
+	display: flex;
+	align-items: center;
+}
+
+.header .header-navigation > ul > li > a {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	color: var(--bs-black);
+	font-weight: 500;
+}
+
+.header .header-navigation > ul > li > a > span > img {
+	width: 24px;
+	height: 24px;
+}
