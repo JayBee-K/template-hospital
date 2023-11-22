@@ -25,114 +25,185 @@
 
 	<style>
 		:root {
-			--primary-color: #2579f2;
-			--primary-hover: #1470f3;
-			--primary-rgb: 37, 141, 242;
-			--secondary-color: #ee4d2d;
-			--secondary-hover: #ef3f1c;
-			--secondary-rgb: 238, 77, 45;
+			--primary-color: #00A2A5;
+			--primary-hover: #7FCBC1;
+			--primary-rgb: 0, 162, 165;
+			--secondary-color: #BB9A77;
+			--secondary-hover: #c79b6a;
+			--secondary-rgb: 187, 154, 119;
 		}
 	</style>
 </head>
 <body>
-<div class="header">
+<header id="header" class="header">
 	<div class="container-fluid">
-		<div class="header-main hstack justify-content-bet gap-10px">
+		<div class="header-main hstack justify-content-between gap-10px">
 			<div class="header-navigation">
 				<ul>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/home.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/trang-chu.png" class="img-fluid" alt=""></span>
 							Home
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/don-tiep.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/don-tiep.png" class="img-fluid" alt=""></span>
 							Đón tiếp
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/kham-benh.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/kham-benh.png" class="img-fluid" alt=""></span>
 							Khám bệnh
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/lay-mau.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/lay-mau.png" class="img-fluid" alt=""></span>
 							Lấy máu
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/xet-nghiem.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/xet-nghiem.png" class="img-fluid" alt=""></span>
 							Xét nghiệm
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/don-tiep.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/ris.png" class="img-fluid" alt=""></span>
 							RIS
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/don-tiep.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/benh-nhan.png" class="img-fluid" alt=""></span>
 							Bệnh nhân
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/dieu-tri.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/dieu-tri.png" class="img-fluid" alt=""></span>
 							Điều trị
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/don-tiep.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/nha-thuoc.png" class="img-fluid" alt=""></span>
 							Nhà thuốc
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/don-tiep.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/kho-thuoc.png" class="img-fluid" alt=""></span>
 							Quản lý kho thuốc
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/don-tiep.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/danh-muc.png" class="img-fluid" alt=""></span>
 							Danh mục
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/don-tiep.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/thu-ngan.png" class="img-fluid" alt=""></span>
 							Thu ngân
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/don-tiep.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/bao-hiem.png" class="img-fluid" alt=""></span>
 							BHYT
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/don-tiep.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/bao-cao.png" class="img-fluid" alt=""></span>
 							Báo cáo
 						</a>
 					</li>
 					<li>
 						<a href="./">
-							<span><img src="./assets/images/icon-nav/don-tiep.png" class="img-fluid" alt=""></span>
+							<span><img src="./assets/images/icons/he-thong.png" class="img-fluid" alt=""></span>
 							Hệ thống
 						</a>
 					</li>
 				</ul>
 			</div>
-			<div class="header-actions"></div>
+			<div class="header-actions hstack gap-20px">
+				<div class="header-language header-dropdown">
+					<button type="button" class="link-default hstack gap-5px" data-bs-toggle="dropdown">
+						<img src="./assets/images/language/vn.png" class="img-fluid" alt="">
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/vn.png" class="img-fluid" alt="">
+								Tiếng Việt
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/en.png" class="img-fluid" alt="">
+								Tiếng Anh
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/cn.png" class="img-fluid" alt="">
+								Tiếng Trung
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-user header-dropdown">
+					<button type="button" class="link-default hstack gap-5px" data-bs-toggle="dropdown">
+						<img src="./assets/images/user/avatar.png" class="img-fluid" alt="">
+						Tài khoản
+						<i class="fas fa-caret-down"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<a class="dropdown-item" href="#">
+								Đăng nhập
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Đăng ký
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Thông tin tài khoản
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Đổi mật khẩu
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="main" class="main">
+	<div class="section-buttons">
+		<div class="container-fluid">
+			<div class="hstack gap-15px justify-content-between">
+				<div class="hstack gap-5px">
+					<a href="" class="button-theme button-theme_light">
+						Thêm mới
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<i class="fal fa-plus"></i>Thêm mới
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
