@@ -35,6 +35,7 @@
 	padding: 4px 10px;
 	font-weight: 500;
 	transition: var(--transition-default);
+	height: 32px;
 }
 
 .button-theme.button-theme_light {
@@ -175,4 +176,170 @@
 .section-buttons {
 	padding: 10px 0;
 	background-color: #015E70;
+}
+
+.theme-form {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.theme-label {
+	font-size: 0.925em;
+	color: var(--bs-black);
+	font-weight: 500;
+	width: 100px;
+	flex-shrink: 0;
+}
+
+.theme-input {
+	border: 1px solid var(--bs-gray-200);
+	border-radius: 2px;
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 0.925em;
+	padding: 4px 10px;
+	font-weight: 500;
+	transition: var(--transition-default);
+	height: 32px;
+}
+
+.theme-input::placeholder {
+	opacity: .7;
+}
+
+.theme-input:disabled {
+	background-color: #efefef;
+	cursor: not-allowed;
+}
+
+.theme-input.form-select {
+	padding-right: 30px;
+	background-position: right 5px center;
+}
+
+.theme-input ~ .select2 {
+	width: 100% !important;
+}
+
+.theme-input ~ .select2-container .select2-selection--single {
+	border: 1px solid var(--bs-gray-200);
+	border-radius: 2px;
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 0.925em;
+	padding: 4px 10px;
+	font-weight: 500;
+	transition: var(--transition-default);
+	height: 32px;
+}
+
+.theme-input ~ .select2-container .select2-selection--single .select2-selection__rendered {
+	line-height: 22px;
+	color: var(--bs-black);
+	padding: 0 10px 0 0;
+}
+
+.theme-input ~ .select2-container .select2-selection--single .select2-selection__arrow {
+	background-image: url(../images/icons/icon-arrow-down.svg);
+	background-repeat: no-repeat;
+	background-position: right 5px center;
+	background-size: 16px 12px;
+}
+
+.theme-input ~ .select2-container .select2-selection--single .select2-selection__arrow b {
+	display: none;
+}
+
+.theme-input ~ .select2-container .select2-dropdown {
+	border: 1px solid var(--bs-gray-200);
+	font-size: 0.925em;
+}
+
+.theme-input ~ .select2-container .select2-search--dropdown .select2-search__field {
+	border: 1px solid var(--bs-gray-200);
+	border-radius: 2px;
+}
+
+.theme-input ~ .select2-container .select2-dropdown .select2-results > .select2-results__options {
+	max-height: 350px;
+}
+
+.theme-input ~ .select2-container .select2-dropdown .select2-results > .select2-results__options::-webkit-scrollbar {
+	width: 5px;
+}
+
+.theme-input ~ .select2-container .select2-dropdown .select2-results > .select2-results__options::-webkit-scrollbar-track {
+	background: #fff;
+}
+
+.theme-input ~ .select2-container .select2-dropdown .select2-results > .select2-results__options::-webkit-scrollbar-thumb {
+	background: #acacac;
+}
+
+.theme-input ~ .select2-container .select2-dropdown .select2-results > .select2-results__options::-webkit-scrollbar-thumb:hover {
+	background: #7b7b7b;
+}
+
+.theme-input ~ .select2-container.select2-container--disabled .select2-selection--single {
+	background-color: #efefef;
+	cursor: not-allowed;
+}
+
+.theme-checkbox > span {
+	position: relative;
+	display: flex;
+	gap: 8px;
+	color: var(--bs-black);
+	font-weight: 500;
+	font-size: 0.925em;
+	cursor: pointer;
+}
+
+.theme-checkbox > span:before {
+	flex-shrink: 0;
+	width: 18px;
+	height: 18px;
+	content: "";
+	overflow: hidden;
+	border-radius: 2px;
+	background-color: var(--bs-white);
+	border: 1px solid var(--bs-gray-300);
+	background-image: url(../images/icons/icon-check.svg);
+	background-size: 0;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: background-size cubic-bezier(.5, 0, .5, 2) .3s, background-color .3s;
+}
+
+.theme-checkbox > input[type=radio] + span:before {
+	border-radius: 50%;
+}
+
+.theme-checkbox > input:checked + span:before {
+	background-color: #4BAE4F;
+	background-size: 100%;
+	border-color: #4BAE4F;
+}
+
+.section-main {
+	padding: 10px 0;
+}
+
+.box-item {
+	background-color: var(--bs-white);
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #f3f3f3;
+}
+
+.box-item .box-item_title {
+	font-size: 1.15em;
+	font-weight: 700;
+	color: var(--bs-black);
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid var(--bs-gray-200);
 }

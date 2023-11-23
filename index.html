@@ -18,6 +18,8 @@
 	<link rel="icon" href="./assets/images/favicon.png">
 	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
 	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
+	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
 	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="./assets/css/base.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
@@ -195,7 +197,7 @@
 	<div class="section-buttons">
 		<div class="container-fluid">
 			<div class="hstack gap-15px justify-content-between">
-				<div class="hstack gap-px">
+				<div class="hstack gap-10px">
 					<a href="" class="button-theme button-theme_light">
 						<img src="./assets/images/icons/icon-plus.png" class="img-fluid" alt="">
 						Thêm mới
@@ -217,14 +219,672 @@
 						Làm mới
 					</a>
 				</div>
+				<div class="hstack gap-10px">
+					<div class="box-form">
+						<select name="" class="form-select theme-input" id="">
+							<option value="">Bình thường</option>
+							<option value="">Ưu tiên</option>
+						</select>
+					</div>
+					<div class="box-form">
+						<select name="" class="form-select theme-input" id="">
+							<option value="">A</option>
+							<option value="">B</option>
+							<option value="">C</option>
+							<option value="">D</option>
+						</select>
+					</div>
+					<div class="box-form">
+						<button type="button" class="button-theme button-theme_light">
+							<img src="./assets/images/icons/icon-loa.png" class="img-fluid" alt="">
+							Gọi số tiếp
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section-main">
+		<div class="container-fluid">
+			<div class="row g-2">
+				<div class="col-lg-8 order-lg-1 order-1">
+					<div class="vstack gap-10px">
+						<div class="box-item">
+							<div class="box-item_title">
+								Thông tin bệnh nhân
+							</div>
+							<div class="row g-2 g-lg-3">
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Đối tượng
+										</div>
+										<select name="" class="form-select theme-input" id="">
+											<option value="">Bảo hiểm</option>
+											<option value="">Quân nhân</option>
+											<option value="">Khác</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Số điện thoại
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											CCCD/HC
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Thẻ KCB
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Mã bệnh nhân
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Họ và tên
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Giới tính
+										</div>
+										<select name="" class="form-select theme-input" id="">
+											<option value="">Nam</option>
+											<option value="">Nữ</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Ngày sinh
+										</div>
+										<div class="row g-2 w-100">
+											<div class="col-7">
+												<div class="row g-2">
+													<div class="col-6">
+														<input type="text" class="form-control theme-input">
+													</div>
+													<div class="col-6">
+														<input type="text" class="form-control theme-input">
+													</div>
+												</div>
+											</div>
+											<div class="col-5">
+												<input type="text" class="form-control theme-input">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											TT/QH/PX
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Tỉnh/Thành phố
+										</div>
+										<select data-placeholder-search="Tìm kiếm tên tỉnh/TP" name=""
+										        class="form-select theme-input initSelect2" id="">
+											<option value="">
+												TP. Hà Nội
+											</option>
+											<option value="">
+												Hải Phòng
+											</option>
+											<option value="">
+												TP. HCM
+											</option>
+											<option value="">
+												Huế
+											</option>
+											<option value="">
+												...
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Quận/Huyện
+										</div>
+										<select data-placeholder-search="Tìm kiếm tên quận/huyện" name=""
+										        class="form-select theme-input initSelect2" id="">
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												Quận Ba Đình
+											</option>
+											<option value="">
+												...
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Phường/Xã
+										</div>
+										<select data-placeholder-search="Tìm kiếm tên phường/xã" name=""
+										        class="form-select theme-input initSelect2" id="">
+											<option value="">
+												Phường Phúc Xá
+											</option>
+											<option value="">
+												Phường Phúc Xá
+											</option>
+											<option value="">
+												Phường Phúc Xá
+											</option>
+											<option value="">
+												Phường Phúc Xá
+											</option>
+											<option value="">
+												...
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label">
+											Địa chỉ
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Nghề nghiệp
+										</div>
+										<select data-placeholder-search="Tìm kiếm nghề nghiệp" name=""
+										        class="form-select theme-input initSelect2" id="">
+											<option value="">
+												Trẻ dưới 6 tuổi đi học
+											</option>
+											<option value="">
+												Học sinh
+											</option>
+											<option value="">
+												Sinh viên
+											</option>
+											<option value="">
+												Công nhân
+											</option>
+											<option value="">
+												...
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Dân tộc
+										</div>
+										<select data-placeholder-search="Tìm kiếm dân tộc" name=""
+										        class="form-select theme-input initSelect2" id="">
+											<option value="">
+												Kinh
+											</option>
+											<option value="">
+												Tày
+											</option>
+											<option value="">
+												Hoa
+											</option>
+											<option value="">
+												Khmer
+											</option>
+											<option value="">
+												...
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Quốc tịch
+										</div>
+										<select data-placeholder-search="Tìm kiếm quốc tịch" name=""
+										        class="form-select theme-input initSelect2" id="">
+											<option value="">
+												Việt Nam
+											</option>
+											<option value="">
+												Laos
+											</option>
+											<option value="">
+												Campuchia
+											</option>
+											<option value="">
+												Thái Lan
+											</option>
+											<option value="">
+												...
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Email
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Nơi làm việc
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Chức vụ
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-item">
+							<div class="box-item_title">
+								Thông tin khác
+							</div>
+							<div class="row g-2 g-lg-3">
+								<div class="col-lg-3">
+									<div class="theme-form">
+										<div class="theme-label">
+											Đăng ký khám
+										</div>
+										<select name="" class="form-select theme-input" id="">
+											<option value="">Khám bệnh</option>
+											<option value="">Khám bệnh</option>
+											<option value="">Khác</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<input type="datetime-local" data-type="full"
+									       class="form-control theme-input initDateRangePicker">
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label">
+											Lý do khám
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label">
+											Dịch vụ
+										</div>
+										<select data-placeholder-search="Tìm kiếm dịch vụ" name=""
+										        class="form-select theme-input initSelect2" id="">
+											<option value="">
+												Khám bệnh thông thường
+											</option>
+											<option value="">
+												Dịch vụ gold
+											</option>
+											<option value="">
+												Dịch vụ Diamond
+											</option>
+											<option value="">
+												...
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label">
+											Phòng khám
+										</div>
+										<select data-placeholder-search="Tìm kiếm phòng khám" name=""
+										        class="form-select theme-input initSelect2" id="">
+											<option value="">
+												Phòng khám 01
+											</option>
+											<option value="">
+												Phòng khám 02
+											</option>
+											<option value="">
+												Phòng khám 03
+											</option>
+											<option value="">
+												...
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label"></div>
+										<div class="row g-2 w-100">
+											<div class="col-4">
+												<label class="theme-checkbox">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span class="text-danger">Test Covid</span>
+												</label>
+											</div>
+											<div class="col-4">
+												<label class="theme-checkbox">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span class="text-danger">Ưu tiền</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 order-lg-2 order-3">
+					<div class="vstack gap-10px">
+						<div class="box-item">
+							<div class="box-item_title">
+								Bảo hiểm y tế
+							</div>
+							<div class="row g-2 g-lg-3">
+								<div class="col-lg-12">
+									<div class="theme-form">
+										<div class="theme-label">
+											Số BHYT
+										</div>
+										<div class="row g-2 w-100">
+											<div class="col-2">
+												<input type="text" class="form-control theme-input">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control theme-input">
+											</div>
+											<div class="col-2">
+												<input type="text" class="form-control theme-input">
+											</div>
+											<div class="col-6">
+												<input type="text" class="form-control theme-input">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="theme-form">
+										<div class="theme-label">
+											KCCCB
+										</div>
+										<div class="row g-2 w-100">
+											<div class="col-4">
+												<input type="text" class="form-control theme-input">
+											</div>
+											<div class="col-8">
+												<input type="text" class="form-control theme-input">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="theme-form">
+										<div class="theme-label">
+											Hạn thẻ
+										</div>
+										<div class="row g-2 w-100 justify-content-between">
+											<div class="col-lg-5">
+												<div class="row g-2 w-100">
+													<div class="col-lg-4">
+														<input type="text" class="form-control theme-input">
+													</div>
+													<div class="col-lg-4">
+														<input type="text" class="form-control theme-input">
+													</div>
+													<div class="col-lg-4">
+														<input type="text" class="form-control theme-input">
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-5">
+												<div class="row g-2 w-100">
+													<div class="col-lg-4">
+														<input type="text" class="form-control theme-input">
+													</div>
+													<div class="col-lg-4">
+														<input type="text" class="form-control theme-input">
+													</div>
+													<div class="col-lg-4">
+														<input type="text" class="form-control theme-input">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label">
+											Địa chỉ thẻ
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label">
+											Nơi sống
+										</div>
+										<select disabled data-placeholder-search="Tìm kiếm tên tỉnh/TP" name=""
+										        class="form-select theme-input initSelect2" id="">
+											<option value="">
+												TP. Hà Nội
+											</option>
+											<option value="">
+												Hải Phòng
+											</option>
+											<option value="">
+												TP. HCM
+											</option>
+											<option value="">
+												Huế
+											</option>
+											<option value="">
+												...
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label">
+											Tuyến KCB
+										</div>
+										<input type="text" class="form-control theme-input">
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label">
+											Mức hưởng
+										</div>
+										<div class="text-end w-100">
+											<div class="fw-bold text-danger">
+												80%
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label">
+											Ngày miễn CT
+										</div>
+										<div class="row g-2 w-100">
+											<div class="col-4">
+												<input type="text" disabled class="form-control theme-input">
+											</div>
+											<div class="col-4">
+												<input type="text" disabled class="form-control theme-input">
+											</div>
+											<div class="col-4">
+												<input type="text" disabled class="form-control theme-input">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label">
+											SN
+										</div>
+										<div class="row g-2 w-100">
+											<div class="col-4">
+												<input type="text" disabled class="form-control theme-input">
+											</div>
+											<div class="col-4">
+												<input type="text" disabled class="form-control theme-input">
+											</div>
+											<div class="col-4">
+												<input type="text" disabled class="form-control theme-input">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label"></div>
+										<div class="row g-2 w-100">
+											<div class="col-12">
+												<label class="theme-checkbox">
+													<input type="radio" name="example-radio-1" class="visually-hidden">
+													<span>Có thẻ</span>
+												</label>
+											</div>
+											<div class="col-12">
+												<label class="theme-checkbox">
+													<input type="radio" name="example-radio-1" class="visually-hidden">
+													<span class="text-danger">Không thẻ</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="theme-form">
+										<div class="theme-label"></div>
+										<div class="row g-2 w-100">
+											<div class="col-12">
+												<label class="theme-checkbox">
+													<input type="checkbox" name="example-checkbox-1"
+													       class="visually-hidden">
+													<span>Nợ thẻ</span>
+												</label>
+											</div>
+											<div class="col-12">
+												<label class="theme-checkbox">
+													<input type="checkbox" name="example-checkbox-1"
+													       class="visually-hidden">
+													<span class="text-danger">GCN không chi trả cùng năm</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						Button đặt ở đây
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<script type=" text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
 <script type="text/javascript"
         src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.js"></script>
 <script type="text/javascript" src="./assets/js/app.js"></script>
 </body>
 </html>
