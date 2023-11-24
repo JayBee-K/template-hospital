@@ -53,7 +53,7 @@ const handleInitSelect2 = function () {
 				language: 'vi',
 				dropdownParent: dropdownParent,
 				width: '100%',
-			}).one('select2:open', function(e) {
+			}).one('select2:open', function (e) {
 				$('input.select2-search__field').prop('placeholder', $(this).attr('data-placeholder-search'));
 			});
 		})
@@ -61,12 +61,12 @@ const handleInitSelect2 = function () {
 }
 
 const handleInitDateRangePicker = function () {
-	let format = 'DD-MM-YYYY';
-	let timePicker = false;
-	let timePicker24Hour = false;
-	let timePickerSeconds = false;
-	let timePickerIncrement = 5; // step minute
 	$('.initDateRangePicker').each(function () {
+		let format = 'DD-MM-YYYY';
+		let timePicker = false;
+		let timePicker24Hour = false;
+		let timePickerSeconds = false;
+		let timePickerIncrement = 5; // step minute
 		const wrapper = $(this).closest('.template-floating');
 		let type = $(this).attr('data-type');
 		if (typeof type != "undefined") {
@@ -80,6 +80,7 @@ const handleInitDateRangePicker = function () {
 				timePicker24Hour = true;
 			}
 		}
+
 		const initDateRangePicker = $(this).daterangepicker({
 			singleDatePicker: true,
 			alwaysShowCalendars: true,

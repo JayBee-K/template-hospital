@@ -1,3 +1,24 @@
+body::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background: #eee;
+	box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(0, 0, 0, 0.3)
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: linear-gradient(left, #96A6BF, #63738C);
+	box-shadow: inset 0 0 1px 1px #5C6670;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(left, #8391A6, #536175);
+}
+
 .button-link {
 	color: var(--bs-blue);
 	font-weight: 600;
@@ -36,50 +57,45 @@
 	font-weight: 500;
 	transition: var(--transition-default);
 	height: 32px;
+	background-color: var(--bg-1);
+	background-image: -moz-linear-gradient(top, var(--bg-1), var(--bg-2));
+	background-image: -ms-linear-gradient(top, var(--bg-1), var(--bg-2));
+	background-image: -o-linear-gradient(top, var(--bg-1), var(--bg-2));
+	background-image: linear-gradient(top, var(--bg-1), var(--bg-2));
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--bg-1)), color-stop(100%, var(--bg-2)));
+	background-image: -webkit-linear-gradient(top, var(--bg-1), var(--bg-2));
 }
 
 .button-theme.button-theme_light {
-	background-color: #eeeeee;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
-	background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
-	background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
-	background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
-	background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
-	background-image: linear-gradient(top, #eeeeee, #cccccc);
+	--bg-1: #eeeeee;
+	--bg-2: #cccccc;
 	color: var(--bs-black) !important;
-	text-shadow: 0 1px 0 #eee;
+	text-shadow: 0 1px 0 var(--bg-1);
+	border-color: #aaaaaa;
 }
 
 .button-theme.button-theme_light:hover {
-	background-color: #dddddd;
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
-	background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
-	background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
-	background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
-	background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
-	background-image: linear-gradient(top, #dddddd, #bbbbbb);
-	cursor: pointer;
-	text-shadow: 0 1px 0 #ddd;
+	background-position: center -30px;
 }
 
 .button-theme.button-theme_primary {
-	background-color: var(--primary-color);
+	--bg-1: var(--primary-color);
+	--bg-2: var(--primary-hover);
 	color: var(--bs-white) !important;
 }
 
 .button-theme.button-theme_primary:hover {
-	background-color: var(--primary-hover);
-	color: var(--bs-white) !important;
+	background-position: center -30px;
 }
 
 .button-theme.button-theme_secondary {
-	background-color: var(--secondary-color);
+	--bg-1: var(--secondary-color);
+	--bg-2: var(--secondary-hover);
 	color: var(--bs-white) !important;
 }
 
 .button-theme.button-theme_secondary:hover {
-	background-color: var(--secondary-hover);
-	color: var(--bs-white) !important;
+	background-position: center -30px;
 }
 
 .button-theme img {
@@ -288,6 +304,41 @@
 	cursor: not-allowed;
 }
 
+.theme-form_icon {
+	position: relative;
+}
+
+.theme-form_icon:before {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 500;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.theme-form_icon.theme-form_calendar:before {
+	content: "\f073";
+}
+
+.theme-form .theme-form_groups {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.theme-form .theme-form_groups .theme-form_groups__icon {
+	flex-shrink: 0;
+}
+
+.theme-form .theme-form_groups .theme-form_groups__icon img {
+	max-width: 100%;
+	width: auto;
+	height: 24px;
+}
+
 .theme-checkbox > span {
 	position: relative;
 	display: flex;
@@ -342,4 +393,38 @@
 	margin-bottom: 10px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid var(--bs-gray-200);
+}
+
+.section-table {
+	background-color: var(--bs-white);
+	border-radius: 4px;
+	border: 1px solid #f3f3f3;
+}
+
+.theme-table .table {
+	font-size: 0.925em;
+	margin-bottom: 0;
+}
+
+.theme-table .table thead tr th {
+	border-color: #cccccc;
+	--bg-1: #eeeeee;
+	--bg-2: #cccccc;
+	background-color: var(--bg-1);
+	background-image: -moz-linear-gradient(top, var(--bg-1), var(--bg-2));
+	background-image: -ms-linear-gradient(top, var(--bg-1), var(--bg-2));
+	background-image: -o-linear-gradient(top, var(--bg-1), var(--bg-2));
+	background-image: linear-gradient(top, var(--bg-1), var(--bg-2));
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--bg-1)), color-stop(100%, var(--bg-2)));
+	background-image: -webkit-linear-gradient(top, var(--bg-1), var(--bg-2));
+	white-space: nowrap;
+}
+
+.theme-table .table tr > * {
+	min-width: 80px;
+}
+
+.theme-table .theme-table_image img {
+	width: 20px;
+	height: 20px;
 }

@@ -28,10 +28,10 @@
 	<style>
 		:root {
 			--primary-color: #00A2A5;
-			--primary-hover: #7FCBC1;
+			--primary-hover: #008588;
 			--primary-rgb: 0, 162, 165;
 			--secondary-color: #BB9A77;
-			--secondary-hover: #c79b6a;
+			--secondary-hover: #a27b51;
 			--secondary-rgb: 187, 154, 119;
 		}
 	</style>
@@ -582,8 +582,10 @@
 									</div>
 								</div>
 								<div class="col-lg-3">
-									<input type="datetime-local" data-type="full"
-									       class="form-control theme-input initDateRangePicker">
+									<div class="theme-form_icon theme-form_calendar">
+										<input type="text" data-type="full"
+										       class="form-control theme-input initDateRangePicker">
+									</div>
 								</div>
 								<div class="col-lg-6">
 									<div class="theme-form">
@@ -662,7 +664,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 order-lg-2 order-3">
+				<div class="col-lg-4 order-lg-2 order-2">
 					<div class="vstack gap-10px">
 						<div class="box-item">
 							<div class="box-item_title">
@@ -871,7 +873,1312 @@
 								</div>
 							</div>
 						</div>
-						Button đặt ở đây
+						<div class="hstack justify-content-end gap-10px">
+							<button type="button" class="button-theme button-theme_primary">
+								<img src="./assets/images/icons/icon-save.png" class="img-fluid" alt="">
+								Thêm mới
+							</button>
+							<button type="button" class="button-theme button-theme_secondary">
+								<img src="./assets/images/icons/icon-print.png" class="img-fluid" alt="">
+								Lưu + In
+							</button>
+							<button type="button" class="button-theme button-theme_light">
+								<img src="./assets/images/icons/icon-refresh.png" class="img-fluid" alt="">
+								Làm mới
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 order-3">
+					<div class="vstack gap-10px">
+						<div class="box-item">
+							<div class="box-item_title">
+								Bộ lọc tìm kiếm bệnh nhân
+							</div>
+							<div class="hstack gap-10px">
+								<div class="theme-form">
+									<input placeholder="Mã bệnh nhân" type="text" class="form-control theme-input">
+								</div>
+								<div class="theme-form">
+									<input placeholder="Số điện thoại" type="text" class="form-control theme-input">
+								</div>
+								<div class="theme-form">
+									<input placeholder="Số CCCD" type="text" class="form-control theme-input">
+								</div>
+								<div class="theme-form">
+									<div class="theme-form_groups">
+										<div class="theme-form_icon theme-form_calendar">
+											<input type="text" class="form-control theme-input initDateRangePicker">
+										</div>
+										<div class="theme-form_groups__icon">
+											<img src="./assets/images/icons/icon-arrow-left.png" alt="">
+										</div>
+										<div class="theme-form_icon theme-form_calendar">
+											<input type="text" class="form-control theme-input initDateRangePicker">
+										</div>
+									</div>
+								</div>
+								<button type="button" class="button-theme button-theme_primary">
+									<i class="fal fa-search"></i>
+									Tìm kiếm
+								</button>
+							</div>
+						</div>
+						<div class="section-table">
+							<div class="table-responsive theme-table">
+								<table class="table table-bordered table-hover align-middle">
+									<thead>
+									<tr>
+										<th>
+											ID
+										</th>
+										<th>
+											Mã bệnh nhân
+										</th>
+										<th>
+											Tên bệnh nhân
+										</th>
+										<th>
+											Số CCCD
+										</th>
+										<th>
+											Đối tượng
+										</th>
+										<th>
+											Giới tính
+										</th>
+										<th>
+											Địa chỉ
+										</th>
+										<th>
+											Ngày sinh
+										</th>
+										<th>
+											Tên phòng
+										</th>
+										<th>
+											Tên dịch vụ
+										</th>
+										<th>
+											Lý do khám
+										</th>
+										<th>
+											Số tiếp đoán
+										</th>
+										<th>
+											Thời gian tiếp đón
+										</th>
+										<th>
+											Trạng thái
+										</th>
+										<th>
+											Ưu tiên
+										</th>
+										<th>
+											Bác sĩ
+										</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-success fw-bold">
+												Đã khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-check.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-danger fw-bold">
+												Không khám
+											</div>
+										</td>
+										<td>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-secondary fw-bold">
+												Chờ khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-delete.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-success fw-bold">
+												Đã khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-check.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-danger fw-bold">
+												Không khám
+											</div>
+										</td>
+										<td>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-secondary fw-bold">
+												Chờ khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-delete.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-success fw-bold">
+												Đã khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-check.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-danger fw-bold">
+												Không khám
+											</div>
+										</td>
+										<td>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-secondary fw-bold">
+												Chờ khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-delete.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-success fw-bold">
+												Đã khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-check.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-danger fw-bold">
+												Không khám
+											</div>
+										</td>
+										<td>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-secondary fw-bold">
+												Chờ khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-delete.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-success fw-bold">
+												Đã khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-check.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-danger fw-bold">
+												Không khám
+											</div>
+										</td>
+										<td>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div>
+												203262
+											</div>
+										</td>
+										<td>
+											<div>
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div>
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div>
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div>
+												Nam
+											</div>
+										</td>
+										<td>
+											<div>
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div>
+												2000
+											</div>
+										</td>
+										<td>
+											<div>
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div>
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div>
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div>11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-secondary fw-bold">
+												Chờ khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-delete.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div>
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
