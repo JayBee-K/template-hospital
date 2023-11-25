@@ -56,7 +56,7 @@ body::-webkit-scrollbar-thumb:hover {
 	padding: 4px 10px;
 	font-weight: 500;
 	transition: var(--transition-default);
-	height: 32px;
+	height: 30px;
 	background-color: var(--bg-1);
 	background-image: -moz-linear-gradient(top, var(--bg-1), var(--bg-2));
 	background-image: -ms-linear-gradient(top, var(--bg-1), var(--bg-2));
@@ -210,16 +210,16 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .theme-input {
-	border: 1px solid var(--bs-gray-400);
-	border-radius: 2px;
+	border: 1px solid var(--bs-gray-500);
+	border-radius: 0;
 	position: relative;
 	overflow: hidden;
 	white-space: nowrap;
 	font-size: 0.925em;
-	padding: 4px 10px;
+	padding: 2px 6px;
 	font-weight: 500;
 	transition: var(--transition-default);
-	height: 32px;
+	height: 30px;
 }
 
 .theme-input::placeholder {
@@ -241,20 +241,20 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .theme-input ~ .select2-container .select2-selection--single {
-	border: 1px solid var(--bs-gray-400);
-	border-radius: 2px;
+	border: 1px solid var(--bs-gray-500);
+	border-radius: 0;
 	position: relative;
 	overflow: hidden;
 	white-space: nowrap;
 	font-size: 0.925em;
-	padding: 4px 10px;
+	padding: 6px 6px;
 	font-weight: 500;
 	transition: var(--transition-default);
-	height: 32px;
+	height: 30px;
 }
 
 .theme-input ~ .select2-container .select2-selection--single .select2-selection__rendered {
-	line-height: 22px;
+	line-height: 16px;
 	color: var(--bs-black);
 	padding: 0 10px 0 0;
 }
@@ -405,6 +405,7 @@ body::-webkit-scrollbar-thumb:hover {
 .theme-table .table {
 	font-size: 0.925em;
 	margin-bottom: 0;
+	--bs-body-color: var(--bs-black)
 }
 
 .theme-table .table thead tr th {
