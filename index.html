@@ -1,2288 +1,2457 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-    <title>Template Cpanel Hospital</title>
-    <meta name="description" content="Template Cpanel Hospital">
-    <meta name="author" content="">
+	<title>Template Cpanel Hospital</title>
+	<meta name="description" content="Template Cpanel Hospital">
+	<meta name="author" content="">
 
-    <meta property="og:title" content="Template Cpanel Hospital">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:description" content="Template Cpanel Hospital">
-    <meta property="og:image" content="">
+	<meta property="og:title" content="Template Cpanel Hospital">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template Cpanel Hospital">
+	<meta property="og:image" content="">
 
-    <link rel="icon" href="./assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="./assets/images/favicon.png">
-    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
-    <link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
+	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/responsive.css">
 
-    <style>
-        :root {
-            --primary-color: #00A2A5;
-            --primary-hover: #008588;
-            --primary-rgb: 0, 162, 165;
-            --secondary-color: #BB9A77;
-            --secondary-hover: #a27b51;
-            --secondary-rgb: 187, 154, 119;
-        }
-    </style>
+	<style>
+		:root {
+			--primary-color: #00A2A5;
+			--primary-hover: #008588;
+			--primary-rgb: 0, 162, 165;
+			--secondary-color: #BB9A77;
+			--secondary-hover: #a27b51;
+			--secondary-rgb: 187, 154, 119;
+		}
+	</style>
 </head>
 <body>
+
+<div class="modal fade modal-default" id="modal-infoOther" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-title">
+					<img src="./assets/images/icons/icon-info.png" class="img-fluid" alt="">
+					Thông tin khác
+				</div>
+				<button type="button" class="link-default fz-18" data-bs-dismiss="modal" aria-label="Close">
+					<i class="fal fa-times"></i>
+				</button>
+			</div>
+			<div class="modal-body p-0">
+				<div class="modal-form">
+					<div class="row g-4">
+						<div class="col-6">
+							<div class="theme-form flex-wrap">
+								<div class="theme-label w-100">
+									Quan hệ
+								</div>
+								<div class="w-100">
+									<select data-placeholder-search="Tìm kiếm tên tỉnh/TP" name=""
+									        class="form-select theme-input theme-input_white initSelect2" id="">
+										<option value="">
+											Bố đẻ
+										</option>
+										<option value="">
+											Mẹ đẻ
+										</option>
+										<option value="">
+											Anh ruột
+										</option>
+										<option value="">
+											Chị ruột
+										</option>
+										<option value="">
+											Em ruột
+										</option>
+										<option value="">
+											Chú
+										</option>
+										<option value="">
+											Bác
+										</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="theme-form flex-wrap">
+								<div class="theme-label w-100">
+									Tên người nhà
+								</div>
+								<div class="w-100">
+									<input type="text" class="form-control theme-input">
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="theme-form flex-wrap">
+								<div class="theme-label w-100">
+									Số CCCD
+								</div>
+								<div class="w-100">
+									<input type="text" class="form-control theme-input">
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="theme-form flex-wrap">
+								<div class="theme-label w-100">
+									Số điện thoại
+								</div>
+								<div class="w-100">
+									<input type="text" class="form-control theme-input">
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="theme-form flex-wrap">
+								<div class="theme-label w-100">
+									Địa chỉ
+								</div>
+								<div class="w-100">
+									<input type="text" class="form-control theme-input">
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="hstack gap-10px justify-content-xl-end justify-content-center">
+								<button type="button" class="button-theme button-theme_primary">
+									<img src="./assets/images/icons/icon-save.png" class="img-fluid" alt="">
+									Lưu
+								</button>
+								<button type="button" data-bs-dismiss="modal" class="button-theme button-theme_light">
+									<img src="./assets/images/icons/icon-delete.png" class="img-fluid" alt="">
+									Hủy bỏ
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <header id="header" class="header">
-    <div class="container-fluid">
-        <div class="header-main hstack justify-content-between gap-10px">
-            <div class="header-navigation">
-                <ul>
-                    <li>
-                        <a class="active" href="./">
-                            <span><img src="./assets/images/icons/trang-chu.png" class="img-fluid" alt=""></span>
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/don-tiep.png" class="img-fluid" alt=""></span>
-                            Đón tiếp
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/kham-benh.png" class="img-fluid" alt=""></span>
-                            Khám bệnh
-                            <i class="fas fa-caret-down"></i>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    Danh sách khám bệnh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Danh sách khám bệnh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Danh sách khám bệnh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Danh sách khám bệnh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Danh sách khám bệnh
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/lay-mau.png" class="img-fluid" alt=""></span>
-                            Lấy máu
-                            <i class="fas fa-caret-down"></i>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    Danh sách khám bệnh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Danh sách khám bệnh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Danh sách khám bệnh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Danh sách khám bệnh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    Danh sách khám bệnh
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/xet-nghiem.png" class="img-fluid" alt=""></span>
-                            Xét nghiệm
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/ris.png" class="img-fluid" alt=""></span>
-                            RIS
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/benh-nhan.png" class="img-fluid" alt=""></span>
-                            Bệnh nhân
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/dieu-tri.png" class="img-fluid" alt=""></span>
-                            Điều trị
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/nha-thuoc.png" class="img-fluid" alt=""></span>
-                            Nhà thuốc
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/kho-thuoc.png" class="img-fluid" alt=""></span>
-                            Quản lý kho thuốc
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/danh-muc.png" class="img-fluid" alt=""></span>
-                            Danh mục
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/thu-ngan.png" class="img-fluid" alt=""></span>
-                            Thu ngân
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/bao-hiem.png" class="img-fluid" alt=""></span>
-                            BHYT
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/bao-cao.png" class="img-fluid" alt=""></span>
-                            Báo cáo
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./">
-                            <span><img src="./assets/images/icons/he-thong.png" class="img-fluid" alt=""></span>
-                            Hệ thống
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="header-actions hstack gap-20px">
-                <div class="header-language header-dropdown">
-                    <button type="button" class="link-default hstack gap-5px" data-bs-toggle="dropdown">
-                        <img src="./assets/images/language/vn.png" class="img-fluid" alt="">
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <img src="./assets/images/language/vn.png" class="img-fluid" alt="">
-                                Tiếng Việt
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <img src="./assets/images/language/en.png" class="img-fluid" alt="">
-                                Tiếng Anh
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <img src="./assets/images/language/cn.png" class="img-fluid" alt="">
-                                Tiếng Trung
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="header-user header-dropdown">
-                    <button type="button" class="link-default hstack gap-5px" data-bs-toggle="dropdown">
-                        <img src="./assets/images/user/avatar.png" class="img-fluid" alt="">
-                        Tài khoản
-                        <i class="fas fa-caret-down"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                Đăng nhập
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                Đăng ký
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                Thông tin tài khoản
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                Đổi mật khẩu
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container-fluid g-0">
+		<div class="header-main hstack gap-10px">
+			<div class="header-logo">
+				<a href="./" class="d-inline-block align-items-center">
+					<img src="./assets/images/logo.png" alt="">
+				</a>
+			</div>
+			<div id="header-navigation" class="header-navigation">
+				<ul>
+					<li>
+						<a class="active" href="./">
+							<span><img src="./assets/images/icons/trang-chu.png" class="img-fluid" alt=""></span>
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/don-tiep.png" class="img-fluid" alt=""></span>
+							Đón tiếp
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/kham-benh.png" class="img-fluid" alt=""></span>
+							Khám bệnh
+							<i class="fas fa-caret-down"></i>
+						</a>
+						<ul>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/lay-mau.png" class="img-fluid" alt=""></span>
+							Lấy máu
+							<i class="fas fa-caret-down"></i>
+						</a>
+						<ul>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/xet-nghiem.png" class="img-fluid" alt=""></span>
+							Xét nghiệm
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/ris.png" class="img-fluid" alt=""></span>
+							RIS
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/benh-nhan.png" class="img-fluid" alt=""></span>
+							Bệnh nhân
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/dieu-tri.png" class="img-fluid" alt=""></span>
+							Điều trị
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/nha-thuoc.png" class="img-fluid" alt=""></span>
+							Nhà thuốc
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/kho-thuoc.png" class="img-fluid" alt=""></span>
+							Quản lý kho thuốc
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/danh-muc.png" class="img-fluid" alt=""></span>
+							Danh mục
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/thu-ngan.png" class="img-fluid" alt=""></span>
+							Thu ngân
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/bao-hiem.png" class="img-fluid" alt=""></span>
+							BHYT
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/bao-cao.png" class="img-fluid" alt=""></span>
+							Báo cáo
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/he-thong.png" class="img-fluid" alt=""></span>
+							Hệ thống
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="header-actions hstack gap-10px">
+				<div class="header-language header-dropdown">
+					<button type="button" class="link-default hstack gap-5px" data-bs-toggle="dropdown">
+						<img src="./assets/images/language/vn.png" class="img-fluid" alt="">
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/vn.png" class="img-fluid" alt="">
+								Tiếng Việt
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/en.png" class="img-fluid" alt="">
+								Tiếng Anh
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/cn.png" class="img-fluid" alt="">
+								Tiếng Trung
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-user header-dropdown">
+					<button type="button" class="link-default hstack gap-5px" data-bs-toggle="dropdown">
+						<img src="./assets/images/user/avatar.png" class="img-fluid" alt="">
+						Tài khoản
+						<i class="fas fa-caret-down"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<a class="dropdown-item" href="#">
+								Đăng nhập
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Đăng ký
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Thông tin tài khoản
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Đổi mật khẩu
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="header-hamburger">
+				<button type="button" class="hamburger-button" id="hamburger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="header-overlay" id="header-overlay"></div>
+		</div>
+	</div>
 </header>
 <div id="main" class="main">
-    <div class="section-buttons">
-        <div class="container-fluid">
-            <div class="hstack gap-15px justify-content-between">
-                <div class="hstack gap-10px">
-                    <a href="" class="button-theme button-theme_light">
-                        <img src="./assets/images/icons/icon-plus.png" class="img-fluid" alt="">
-                        Thêm mới
-                    </a>
-                    <a href="" class="button-theme button-theme_light">
-                        <img src="./assets/images/icons/icon-list.png" class="img-fluid" alt="">
-                        Danh sách
-                    </a>
-                    <a href="" class="button-theme button-theme_light">
-                        <img src="./assets/images/icons/icon-medical-appointment.png" class="img-fluid" alt="">
-                        Hẹn khám
-                    </a>
-                    <a href="" class="button-theme button-theme_light">
-                        <img src="./assets/images/icons/icon-calendar.png" class="img-fluid" alt="">
-                        Đặt lịch khám
-                    </a>
-                    <a href="" class="button-theme button-theme_light">
-                        <img src="./assets/images/icons/icon-refresh.png" class="img-fluid" alt="">
-                        Làm mới
-                    </a>
-                </div>
-                <div class="hstack gap-10px">
-                    <div class="box-form">
-                        <select name="" class="form-select theme-input" id="">
-                            <option value="">Bình thường</option>
-                            <option value="">Ưu tiên</option>
-                        </select>
-                    </div>
-                    <div class="box-form">
-                        <select name="" class="form-select theme-input" id="">
-                            <option value="">A</option>
-                            <option value="">B</option>
-                            <option value="">C</option>
-                            <option value="">D</option>
-                        </select>
-                    </div>
-                    <div class="box-form">
-                        <button type="button" class="button-theme button-theme_light">
-                            <img src="./assets/images/icons/icon-loa.png" class="img-fluid" alt="">
-                            Gọi số tiếp
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-main">
-        <div class="container-fluid">
-            <div class="row g-1">
-                <div class="col-lg-8 order-lg-1 order-1">
-                    <div class="vstack gap-5px">
-                        <div class="box-item">
-                            <div class="box-item_wrapper">
-                                <div class="box-item_title">
-                                    Thông tin bệnh nhân
-                                </div>
-                                <div class="row g-1">
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Đối tượng
-                                            </div>
-                                            <select name="" class="form-select theme-input" id="">
-                                                <option value="">Bảo hiểm</option>
-                                                <option value="">Quân nhân</option>
-                                                <option value="">Khác</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Số điện thoại
-                                            </div>
-                                            <input type="text" class="form-control theme-input">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                CCCD/HC
-                                            </div>
-                                            <input type="text" class="form-control theme-input">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Thẻ KCB
-                                            </div>
-                                            <input type="text" class="form-control theme-input">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Mã bệnh nhân
-                                            </div>
-                                            <input type="text" class="form-control theme-input">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Họ và tên
-                                            </div>
-                                            <input type="text" class="form-control theme-input">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Giới tính
-                                            </div>
-                                            <select name="" class="form-select theme-input" id="">
-                                                <option value="">Nam</option>
-                                                <option value="">Nữ</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Ngày sinh
-                                            </div>
-                                            <div class="row g-1 w-100">
-                                                <div class="col-7">
-                                                    <div class="row g-1">
-                                                        <div class="col-6">
-                                                            <input type="text" class="form-control theme-input">
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <input type="text" class="form-control theme-input">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-5">
-                                                    <input type="text" class="form-control theme-input">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                TT/QH/PX
-                                            </div>
-                                            <input type="text" class="form-control theme-input">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Tỉnh/Thành phố
-                                            </div>
-                                            <select data-placeholder-search="Tìm kiếm tên tỉnh/TP" name=""
-                                                    class="form-select theme-input initSelect2" id="">
-                                                <option value="">
-                                                    TP. Hà Nội
-                                                </option>
-                                                <option value="">
-                                                    Hải Phòng
-                                                </option>
-                                                <option value="">
-                                                    TP. HCM
-                                                </option>
-                                                <option value="">
-                                                    Huế
-                                                </option>
-                                                <option value="">
-                                                    ...
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Quận/Huyện
-                                            </div>
-                                            <select data-placeholder-search="Tìm kiếm tên quận/huyện" name=""
-                                                    class="form-select theme-input initSelect2" id="">
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    Quận Ba Đình
-                                                </option>
-                                                <option value="">
-                                                    ...
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Phường/Xã
-                                            </div>
-                                            <select data-placeholder-search="Tìm kiếm tên phường/xã" name=""
-                                                    class="form-select theme-input initSelect2" id="">
-                                                <option value="">
-                                                    Phường Phúc Xá
-                                                </option>
-                                                <option value="">
-                                                    Phường Phúc Xá
-                                                </option>
-                                                <option value="">
-                                                    Phường Phúc Xá
-                                                </option>
-                                                <option value="">
-                                                    Phường Phúc Xá
-                                                </option>
-                                                <option value="">
-                                                    ...
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Địa chỉ
-                                            </div>
-                                            <input type="text" class="form-control theme-input">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Nghề nghiệp
-                                            </div>
-                                            <select data-placeholder-search="Tìm kiếm nghề nghiệp" name=""
-                                                    class="form-select theme-input initSelect2" id="">
-                                                <option value="">
-                                                    Trẻ dưới 6 tuổi đi học
-                                                </option>
-                                                <option value="">
-                                                    Học sinh
-                                                </option>
-                                                <option value="">
-                                                    Sinh viên
-                                                </option>
-                                                <option value="">
-                                                    Công nhân
-                                                </option>
-                                                <option value="">
-                                                    ...
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Dân tộc
-                                            </div>
-                                            <select data-placeholder-search="Tìm kiếm dân tộc" name=""
-                                                    class="form-select theme-input initSelect2" id="">
-                                                <option value="">
-                                                    Kinh
-                                                </option>
-                                                <option value="">
-                                                    Tày
-                                                </option>
-                                                <option value="">
-                                                    Hoa
-                                                </option>
-                                                <option value="">
-                                                    Khmer
-                                                </option>
-                                                <option value="">
-                                                    ...
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Quốc tịch
-                                            </div>
-                                            <select data-placeholder-search="Tìm kiếm quốc tịch" name=""
-                                                    class="form-select theme-input initSelect2" id="">
-                                                <option value="">
-                                                    Việt Nam
-                                                </option>
-                                                <option value="">
-                                                    Laos
-                                                </option>
-                                                <option value="">
-                                                    Campuchia
-                                                </option>
-                                                <option value="">
-                                                    Thái Lan
-                                                </option>
-                                                <option value="">
-                                                    ...
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Email
-                                            </div>
-                                            <input type="text" class="form-control theme-input">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Nơi làm việc
-                                            </div>
-                                            <input type="text" class="form-control theme-input">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Chức vụ
-                                            </div>
-                                            <input type="text" class="form-control theme-input">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-item_wrapper">
-                                <div class="box-item_title">
-                                    Thông tin khác
-                                </div>
-                                <div class="row g-1">
-                                    <div class="col-lg-3">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Đăng ký khám
-                                            </div>
-                                            <select name="" class="form-select theme-input" id="">
-                                                <option value="">Khám bệnh</option>
-                                                <option value="">Khám bệnh</option>
-                                                <option value="">Khác</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <div class="theme-form_icon theme-form_calendar">
-                                            <input type="text" data-type="full"
-                                                   class="form-control theme-input initDateRangePicker">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Lý do khám
-                                            </div>
-                                            <input type="text" class="form-control theme-input">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Dịch vụ
-                                            </div>
-                                            <select data-placeholder-search="Tìm kiếm dịch vụ" name=""
-                                                    class="form-select theme-input initSelect2" id="">
-                                                <option value="">
-                                                    Khám bệnh thông thường
-                                                </option>
-                                                <option value="">
-                                                    Dịch vụ gold
-                                                </option>
-                                                <option value="">
-                                                    Dịch vụ Diamond
-                                                </option>
-                                                <option value="">
-                                                    ...
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="theme-form">
-                                            <div class="theme-label">
-                                                Phòng khám
-                                            </div>
-                                            <select data-placeholder-search="Tìm kiếm phòng khám" name=""
-                                                    class="form-select theme-input initSelect2" id="">
-                                                <option value="">
-                                                    Phòng khám 01
-                                                </option>
-                                                <option value="">
-                                                    Phòng khám 02
-                                                </option>
-                                                <option value="">
-                                                    Phòng khám 03
-                                                </option>
-                                                <option value="">
-                                                    ...
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="theme-form">
-                                            <div class="theme-label"></div>
-                                            <div class="row g-1 w-100">
-                                                <div class="col-4">
-                                                    <label class="theme-checkbox">
-                                                        <input type="checkbox" name="example-checkbox-2"
-                                                               class="visually-hidden">
-                                                        <span class="text-danger">Test Covid</span>
-                                                    </label>
-                                                </div>
-                                                <div class="col-4">
-                                                    <label class="theme-checkbox">
-                                                        <input type="checkbox" name="example-checkbox-2"
-                                                               class="visually-hidden">
-                                                        <span class="text-danger">Ưu tiền</span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 order-lg-2 order-2">
-                    <div class="vstack gap-5px">
-                        <div class="box-item">
-                            <div class="box-item_title">
-                                Bảo hiểm y tế
-                            </div>
-                            <div class="row g-1">
-                                <div class="col-lg-12">
-                                    <div class="theme-form">
-                                        <div class="theme-label">
-                                            Số BHYT
-                                        </div>
-                                        <div class="row g-1 w-100">
-                                            <div class="col-2">
-                                                <input type="text" class="form-control theme-input">
-                                            </div>
-                                            <div class="col-2">
-                                                <input type="text" class="form-control theme-input">
-                                            </div>
-                                            <div class="col-2">
-                                                <input type="text" class="form-control theme-input">
-                                            </div>
-                                            <div class="col-6">
-                                                <input type="text" class="form-control theme-input">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="theme-form">
-                                        <div class="theme-label">
-                                            KCCCB
-                                        </div>
-                                        <div class="row g-1 w-100">
-                                            <div class="col-4">
-                                                <input type="text" class="form-control theme-input">
-                                            </div>
-                                            <div class="col-8">
-                                                <input type="text" class="form-control theme-input">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="theme-form">
-                                        <div class="theme-label">
-                                            Hạn thẻ
-                                        </div>
-                                        <div class="row g-1 w-100 justify-content-between">
-                                            <div class="col-lg-5">
-                                                <div class="row g-1">
-                                                    <div class="col-lg-4">
-                                                        <input type="text" class="form-control theme-input">
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <input type="text" class="form-control theme-input">
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <input type="text" class="form-control theme-input">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="row g-1">
-                                                    <div class="col-lg-4">
-                                                        <input type="text" class="form-control theme-input">
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <input type="text" class="form-control theme-input">
-                                                    </div>
-                                                    <div class="col-lg-4">
-                                                        <input type="text" class="form-control theme-input">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="theme-form">
-                                        <div class="theme-label">
-                                            Địa chỉ thẻ
-                                        </div>
-                                        <input type="text" class="form-control theme-input">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="theme-form">
-                                        <div class="theme-label">
-                                            Nơi sống
-                                        </div>
-                                        <select disabled data-placeholder-search="Tìm kiếm tên tỉnh/TP" name=""
-                                                class="form-select theme-input initSelect2" id="">
-                                            <option value="">
-                                                TP. Hà Nội
-                                            </option>
-                                            <option value="">
-                                                Hải Phòng
-                                            </option>
-                                            <option value="">
-                                                TP. HCM
-                                            </option>
-                                            <option value="">
-                                                Huế
-                                            </option>
-                                            <option value="">
-                                                ...
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="theme-form">
-                                        <div class="theme-label">
-                                            Tuyến KCB
-                                        </div>
-                                        <input type="text" class="form-control theme-input">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="theme-form">
-                                        <div class="theme-label">
-                                            Mức hưởng
-                                        </div>
-                                        <div class="text-end w-100">
-                                            <div class="fw-bold text-danger">
-                                                80%
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="theme-form">
-                                        <div class="theme-label">
-                                            Ngày miễn CT
-                                        </div>
-                                        <div class="row g-1 w-100">
-                                            <div class="col-4">
-                                                <input type="text" disabled class="form-control theme-input">
-                                            </div>
-                                            <div class="col-4">
-                                                <input type="text" disabled class="form-control theme-input">
-                                            </div>
-                                            <div class="col-4">
-                                                <input type="text" disabled class="form-control theme-input">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="theme-form">
-                                        <div class="theme-label">
-                                            SN
-                                        </div>
-                                        <div class="row g-1 w-100">
-                                            <div class="col-4">
-                                                <input type="text" disabled class="form-control theme-input">
-                                            </div>
-                                            <div class="col-4">
-                                                <input type="text" disabled class="form-control theme-input">
-                                            </div>
-                                            <div class="col-4">
-                                                <input type="text" disabled class="form-control theme-input">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="theme-form">
-                                        <div class="theme-label"></div>
-                                        <div class="row g-1 w-100">
-                                            <div class="col-12">
-                                                <label class="theme-checkbox">
-                                                    <input type="radio" name="example-radio-1" class="visually-hidden">
-                                                    <span>Có thẻ</span>
-                                                </label>
-                                            </div>
-                                            <div class="col-12">
-                                                <label class="theme-checkbox">
-                                                    <input type="radio" name="example-radio-1" class="visually-hidden">
-                                                    <span class="text-danger">Không thẻ</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="theme-form">
-                                        <div class="row g-1 w-100">
-                                            <div class="col-12">
-                                                <label class="theme-checkbox">
-                                                    <input type="checkbox" name="example-checkbox-1"
-                                                           class="visually-hidden">
-                                                    <span>Nợ thẻ</span>
-                                                </label>
-                                            </div>
-                                            <div class="col-12">
-                                                <label class="theme-checkbox">
-                                                    <input type="checkbox" name="example-checkbox-1"
-                                                           class="visually-hidden">
-                                                    <span class="text-danger">GCN không chi trả cùng năm</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hstack justify-content-end gap-10px">
-                            <button type="button" class="button-theme button-theme_primary">
-                                <img src="./assets/images/icons/icon-save.png" class="img-fluid" alt="">
-                                Thêm mới
-                            </button>
-                            <button type="button" class="button-theme button-theme_secondary">
-                                <img src="./assets/images/icons/icon-print.png" class="img-fluid" alt="">
-                                Lưu + In
-                            </button>
-                            <button type="button" class="button-theme button-theme_light">
-                                <img src="./assets/images/icons/icon-refresh.png" class="img-fluid" alt="">
-                                Làm mới
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 order-3">
-                    <div class="vstack gap-5px">
-                        <div class="box-item">
-                            <div class="box-item_title mb-0">
-                                Bộ lọc tìm kiếm bệnh nhân
-                            </div>
-                            <div class="hstack gap-5px">
-                                <div class="theme-form">
-                                    <input placeholder="Mã bệnh nhân" type="text" class="form-control theme-input">
-                                </div>
-                                <div class="theme-form">
-                                    <input placeholder="Số điện thoại" type="text" class="form-control theme-input">
-                                </div>
-                                <div class="theme-form">
-                                    <input placeholder="Số CCCD" type="text" class="form-control theme-input">
-                                </div>
-                                <div class="theme-form">
-                                    <div class="theme-form_groups">
-                                        <div class="theme-form_icon theme-form_calendar">
-                                            <input type="text" class="form-control theme-input initDateRangePicker">
-                                        </div>
-                                        <div class="theme-form_groups__icon">
-                                            <img src="./assets/images/icons/icon-arrow-left.png" alt="">
-                                        </div>
-                                        <div class="theme-form_icon theme-form_calendar">
-                                            <input type="text" class="form-control theme-input initDateRangePicker">
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="button" class="button-theme button-theme_primary">
-                                    <i class="fal fa-search"></i>
-                                    Tìm kiếm
-                                </button>
-                            </div>
-                        </div>
-                        <div class="section-table">
-                            <div class="table-responsive theme-table">
-                                <table class="table table-bordered table-hover align-middle">
-                                    <thead>
-                                    <tr>
-                                        <th>
-                                            ID
-                                        </th>
-                                        <th>
-                                            Mã bệnh nhân
-                                        </th>
-                                        <th>
-                                            Tên bệnh nhân
-                                        </th>
-                                        <th>
-                                            Số CCCD
-                                        </th>
-                                        <th>
-                                            Đối tượng
-                                        </th>
-                                        <th>
-                                            Giới tính
-                                        </th>
-                                        <th>
-                                            Địa chỉ
-                                        </th>
-                                        <th>
-                                            Ngày sinh
-                                        </th>
-                                        <th>
-                                            Tên phòng
-                                        </th>
-                                        <th>
-                                            Tên dịch vụ
-                                        </th>
-                                        <th>
-                                            Lý do khám
-                                        </th>
-                                        <th>
-                                            Số tiếp đoán
-                                        </th>
-                                        <th>
-                                            Thời gian tiếp đón
-                                        </th>
-                                        <th>
-                                            Trạng thái
-                                        </th>
-                                        <th>
-                                            Ưu tiên
-                                        </th>
-                                        <th>
-                                            Bác sĩ
-                                        </th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-success fw-bold">
-                                                Đã khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-center theme-table_image">
-                                                <img src="./assets/images/icons/icon-check.png" class="img-fluid"
-                                                     alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-danger fw-bold">
-                                                Không khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-secondary fw-bold">
-                                                Chờ khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-center theme-table_image">
-                                                <img src="./assets/images/icons/icon-delete.png" class="img-fluid"
-                                                     alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-success fw-bold">
-                                                Đã khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-center theme-table_image">
-                                                <img src="./assets/images/icons/icon-check.png" class="img-fluid"
-                                                     alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-danger fw-bold">
-                                                Không khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-secondary fw-bold">
-                                                Chờ khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-center theme-table_image">
-                                                <img src="./assets/images/icons/icon-delete.png" class="img-fluid"
-                                                     alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-success fw-bold">
-                                                Đã khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-center theme-table_image">
-                                                <img src="./assets/images/icons/icon-check.png" class="img-fluid"
-                                                     alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-danger fw-bold">
-                                                Không khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-secondary fw-bold">
-                                                Chờ khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-center theme-table_image">
-                                                <img src="./assets/images/icons/icon-delete.png" class="img-fluid"
-                                                     alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-success fw-bold">
-                                                Đã khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-center theme-table_image">
-                                                <img src="./assets/images/icons/icon-check.png" class="img-fluid"
-                                                     alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-danger fw-bold">
-                                                Không khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-secondary fw-bold">
-                                                Chờ khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-center theme-table_image">
-                                                <img src="./assets/images/icons/icon-delete.png" class="img-fluid"
-                                                     alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-success fw-bold">
-                                                Đã khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-center theme-table_image">
-                                                <img src="./assets/images/icons/icon-check.png" class="img-fluid"
-                                                     alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-danger fw-bold">
-                                                Không khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="text-end">
-                                                89
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                203262
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                123456789123
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Viện phí
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nam
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                2000
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Phòng khám 01
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Khám tai mũi họng
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                testupdate
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-end">
-                                                150
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>11:25 21/11/2023</div>
-                                        </td>
-                                        <td>
-                                            <div class="text-secondary fw-bold">
-                                                Chờ khám
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="text-center theme-table_image">
-                                                <img src="./assets/images/icons/icon-delete.png" class="img-fluid"
-                                                     alt="">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div>
-                                                Nguyễn Văn ABC
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-footer">
-        <div class="container-fluid">
-            <div class="row g-1 align-items-center">
-                <div class="col-lg-6">
-                    <div class="footer-text">
-                        Tổng cộng: <b>7500</b> dòng dữ liệu
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="section-pagination">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#">
-                                    <i class="fal fa-angle-left"></i>
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">
-                                    1
-                                </a>
-                            </li>
-                            <li class="page-item active">
-                                <a class="page-link" href="#">
-                                    2
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">
-                                    3
-                                </a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">
-                                    <i class="fal fa-angle-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="section-buttons">
+		<div class="container-fluid g-0">
+			<div class="section-buttons_list hstack gap-15px justify-content-between">
+				<div class="section-buttons_list__item hstack gap-10px">
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-plus.png" class="img-fluid" alt="">
+						Thêm mới
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-list.png" class="img-fluid" alt="">
+						Danh sách
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-medical-appointment.png" class="img-fluid" alt="">
+						Hẹn khám
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-calendar.png" class="img-fluid" alt="">
+						Đặt lịch khám
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-refresh.png" class="img-fluid" alt="">
+						Làm mới
+					</a>
+				</div>
+				<div class="section-buttons_list__item hstack gap-10px">
+					<div class="box-form">
+						<select name="" class="form-select theme-input" id="">
+							<option value="">Bình thường</option>
+							<option value="">Ưu tiên</option>
+						</select>
+					</div>
+					<div class="box-form">
+						<select name="" class="form-select theme-input" id="">
+							<option value="">A</option>
+							<option value="">B</option>
+							<option value="">C</option>
+							<option value="">D</option>
+						</select>
+					</div>
+					<div class="box-form">
+						<button type="button" class="button-theme button-theme_light">
+							<img src="./assets/images/icons/icon-loa.png" class="img-fluid" alt="">
+							Gọi số tiếp
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section-main">
+		<div class="container-fluid g-0">
+			<div class="row g-1">
+				<div class="col-xl-8 order-lg-1 order-1">
+					<div class="vstack gap-5px">
+						<div class="box-item">
+							<div class="box-item_wrapper">
+								<div class="row g-1">
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Đối tượng
+											</div>
+											<select name="" class="form-select theme-input" id="">
+												<option value="">Bảo hiểm</option>
+												<option value="">Quân nhân</option>
+												<option value="">Khác</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Số điện thoại
+											</div>
+											<input type="text" required class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												CCCD/HC
+											</div>
+											<input type="text" required class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Thẻ KCB
+											</div>
+											<input type="text" class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Mã bệnh nhân
+											</div>
+											<input type="text" class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Họ và tên
+											</div>
+											<input type="text" required class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Giới tính
+											</div>
+											<select name="" class="form-select theme-input" id="">
+												<option value="">Nam</option>
+												<option value="">Nữ</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Ngày sinh
+											</div>
+											<div class="row g-1">
+												<div class="col-7">
+													<div class="row g-1">
+														<div class="col-6">
+															<input type="text" class="form-control theme-input">
+														</div>
+														<div class="col-6">
+															<input type="text" class="form-control theme-input">
+														</div>
+													</div>
+												</div>
+												<div class="col-5">
+													<input type="text" required class="form-control theme-input">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												TT/QH/PX
+											</div>
+											<input type="text" class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Tỉnh/Thành phố
+											</div>
+											<select data-placeholder-search="Tìm kiếm tên tỉnh/TP" name=""
+											        class="form-select theme-input initSelect2" id="">
+												<option value="">
+													TP. Hà Nội
+												</option>
+												<option value="">
+													Hải Phòng
+												</option>
+												<option value="">
+													TP. HCM
+												</option>
+												<option value="">
+													Huế
+												</option>
+												<option value="">
+													...
+												</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Quận/Huyện
+											</div>
+											<select data-placeholder-search="Tìm kiếm tên quận/huyện" name=""
+											        class="form-select theme-input initSelect2" id="">
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													Quận Ba Đình
+												</option>
+												<option value="">
+													...
+												</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Phường/Xã
+											</div>
+											<select data-placeholder-search="Tìm kiếm tên phường/xã" name=""
+											        class="form-select theme-input initSelect2" id="">
+												<option value="">
+													Phường Phúc Xá
+												</option>
+												<option value="">
+													Phường Phúc Xá
+												</option>
+												<option value="">
+													Phường Phúc Xá
+												</option>
+												<option value="">
+													Phường Phúc Xá
+												</option>
+												<option value="">
+													...
+												</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Địa chỉ
+											</div>
+											<input type="text" class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Nghề nghiệp
+											</div>
+											<select data-placeholder-search="Tìm kiếm nghề nghiệp" name=""
+											        class="form-select theme-input initSelect2" id="">
+												<option value="">
+													Trẻ dưới 6 tuổi đi học
+													Trẻ dưới 6 tuổi đi học
+													Trẻ dưới 6 tuổi đi học
+													Trẻ dưới 6 tuổi đi học
+												</option>
+												<option value="">
+													Học sinh
+												</option>
+												<option value="">
+													Sinh viên
+												</option>
+												<option value="">
+													Công nhân
+												</option>
+												<option value="">
+													...
+												</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Dân tộc
+											</div>
+											<select data-placeholder-search="Tìm kiếm dân tộc" name=""
+											        class="form-select theme-input initSelect2" id="">
+												<option value="">
+													Kinh
+												</option>
+												<option value="">
+													Tày
+												</option>
+												<option value="">
+													Hoa
+												</option>
+												<option value="">
+													Khmer
+												</option>
+												<option value="">
+													...
+												</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Quốc tịch
+											</div>
+											<select data-placeholder-search="Tìm kiếm quốc tịch" name=""
+											        class="form-select theme-input initSelect2" id="">
+												<option value="">
+													Việt Nam
+												</option>
+												<option value="">
+													Laos
+												</option>
+												<option value="">
+													Campuchia
+												</option>
+												<option value="">
+													Thái Lan
+												</option>
+												<option value="">
+													...
+												</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Email
+											</div>
+											<input type="text" class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Nơi làm việc
+											</div>
+											<input type="text" class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-lg-3 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Chức vụ
+											</div>
+											<input type="text" class="form-control theme-input">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="box-item_wrapper">
+								<div class="row g-1">
+									<div class="col-12">
+										<div class="theme-form">
+											<div class="theme-label">
+												<button type="button" data-bs-toggle="modal"
+												        data-bs-target="#modal-infoOther"
+												        class="button-theme button-theme_sm button-theme_primary">
+													Thông tin khác
+												</button>
+											</div>
+											<div class="text-start">
+												...
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Đăng ký khám
+											</div>
+											<div class="w-100">
+												<div class="row g-1">
+													<div class="col-6 col-lg-5">
+														<select name="" class="form-select theme-input" id="">
+															<option value="">Khám bệnh</option>
+															<option value="">Khám bệnh</option>
+															<option value="">Khác</option>
+														</select>
+													</div>
+													<div class="col-6 col-lg-7">
+														<div class="theme-form_icon theme-form_calendar">
+															<input type="text" data-type="full"
+															       class="form-control theme-input initDateRangePicker">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Lý do khám
+											</div>
+											<input type="text" required class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-lg-6 col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Dịch vụ
+											</div>
+											<select data-placeholder-search="Tìm kiếm dịch vụ" name=""
+											        class="form-select theme-input initSelect2" id="">
+												<option value="">
+													Khám bệnh thông thường
+												</option>
+												<option value="">
+													Dịch vụ gold
+												</option>
+												<option value="">
+													Dịch vụ Diamond
+												</option>
+												<option value="">
+													...
+												</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Phòng khám
+											</div>
+											<select data-placeholder-search="Tìm kiếm phòng khám" name=""
+											        class="form-select theme-input initSelect2" id="">
+												<option value="">
+													Phòng khám 01
+												</option>
+												<option value="">
+													Phòng khám 02
+												</option>
+												<option value="">
+													Phòng khám 03
+												</option>
+												<option value="">
+													...
+												</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="theme-form">
+											<div class="theme-label"></div>
+											<div class="row g-1 w-100">
+												<div class="col-4">
+													<label class="theme-checkbox">
+														<input type="checkbox" name="example-checkbox-2"
+														       class="visually-hidden">
+														<span class="text-danger">Test Covid</span>
+													</label>
+												</div>
+												<div class="col-4">
+													<label class="theme-checkbox">
+														<input type="checkbox" name="example-checkbox-2"
+														       class="visually-hidden">
+														<span class="text-danger">Ưu tiền</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 order-lg-2 order-2">
+					<div class="vstack">
+						<div class="box-item">
+							<div class="box-item_wrapper box-item_legend">
+								<div class="box-item_legend__title">
+									<span>
+										Bảo hiểm y tế
+									</span>
+								</div>
+								<div class="row g-1">
+									<div class="col-lg-12">
+										<div class="theme-form">
+											<div class="theme-label">
+												Sổ BHYT
+											</div>
+											<div class="w-100">
+												<div class="row g-1">
+													<div class="col-2">
+														<input type="text" class="form-control theme-input">
+													</div>
+													<div class="col-2">
+														<input type="text" class="form-control theme-input">
+													</div>
+													<div class="col-2">
+														<input type="text" class="form-control theme-input">
+													</div>
+													<div class="col-6">
+														<input type="text" class="form-control theme-input">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="theme-form">
+											<div class="theme-label">
+												KCCCB
+											</div>
+											<div class="w-100">
+												<div class="row g-1">
+													<div class="col-lg-4 col-5">
+														<input type="text" class="form-control theme-input">
+													</div>
+													<div class="col-lg-8 col-7">
+														<input type="text" class="form-control theme-input">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="theme-form">
+											<div class="theme-label">
+												Hạn thẻ
+											</div>
+											<div class="w-100">
+												<div class="row g-1 justify-content-between">
+													<div class="col-sm-5">
+														<div class="row g-1">
+															<div class="col-4">
+																<input type="text" class="form-control theme-input">
+															</div>
+															<div class="col-4">
+																<input type="text" class="form-control theme-input">
+															</div>
+															<div class="col-4">
+																<input type="text" class="form-control theme-input">
+															</div>
+														</div>
+													</div>
+													<div class="col-sm-5">
+														<div class="row g-1">
+															<div class="col-4">
+																<input type="text" class="form-control theme-input">
+															</div>
+															<div class="col-4">
+																<input type="text" class="form-control theme-input">
+															</div>
+															<div class="col-4">
+																<input type="text" class="form-control theme-input">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Địa chỉ thẻ
+											</div>
+											<input type="text" class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Nơi sống
+											</div>
+											<select disabled data-placeholder-search="Tìm kiếm tên tỉnh/TP" name=""
+											        class="form-select theme-input initSelect2" id="">
+												<option value="">
+													TP. Hà Nội
+												</option>
+												<option value="">
+													Hải Phòng
+												</option>
+												<option value="">
+													TP. HCM
+												</option>
+												<option value="">
+													Huế
+												</option>
+												<option value="">
+													...
+												</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Tuyến KCB
+											</div>
+											<input type="text" class="form-control theme-input">
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="theme-form flex-nowrap">
+											<div class="theme-label">
+												Mức hưởng
+											</div>
+											<div class="text-end w-100">
+												<div class="fw-bold text-danger">
+													80%
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												Ngày miễn CT
+											</div>
+											<div class="row g-1 w-100">
+												<div class="col-4">
+													<input type="text" disabled class="form-control theme-input">
+												</div>
+												<div class="col-4">
+													<input type="text" disabled class="form-control theme-input">
+												</div>
+												<div class="col-4">
+													<input type="text" disabled class="form-control theme-input">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="theme-form">
+											<div class="theme-label">
+												SN
+											</div>
+											<div class="row g-1 w-100">
+												<div class="col-4">
+													<input type="text" disabled class="form-control theme-input">
+												</div>
+												<div class="col-4">
+													<input type="text" disabled class="form-control theme-input">
+												</div>
+												<div class="col-4">
+													<input type="text" disabled class="form-control theme-input">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="theme-form">
+											<div class="theme-label"></div>
+											<div class="row g-1 w-100">
+												<div class="col-12">
+													<label class="theme-checkbox">
+														<input type="radio" name="example-radio-1"
+														       class="visually-hidden">
+														<span>Có thẻ</span>
+													</label>
+												</div>
+												<div class="col-12">
+													<label class="theme-checkbox">
+														<input type="radio" name="example-radio-1"
+														       class="visually-hidden">
+														<span class="text-danger">Không thẻ</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="theme-form">
+											<div class="row g-1 w-100">
+												<div class="col-12">
+													<label class="theme-checkbox">
+														<input type="checkbox" name="example-checkbox-1"
+														       class="visually-hidden">
+														<span>Nợ thẻ</span>
+													</label>
+												</div>
+												<div class="col-12">
+													<label class="theme-checkbox">
+														<input type="checkbox" name="example-checkbox-1"
+														       class="visually-hidden">
+														<span class="text-danger">GCN không chi trả cùng năm</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box-buttons hstack justify-content-lg-end justify-content-center gap-5px">
+							<button type="button" class="button-theme button-theme_primary">
+								<img src="./assets/images/icons/icon-save.png" class="img-fluid" alt="">
+								Thêm mới
+							</button>
+							<button type="button" class="button-theme button-theme_secondary">
+								<img src="./assets/images/icons/icon-print.png" class="img-fluid" alt="">
+								Lưu + In
+							</button>
+							<button type="button" class="button-theme button-theme_light">
+								<img src="./assets/images/icons/icon-refresh.png" class="img-fluid" alt="">
+								Làm mới
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 order-3">
+					<div class="vstack">
+						<div class="box-item box-item_divider">
+							<div class="box-item_wrapper box-item_collapse">
+								<div class="collapse collapse-filter" id="collapse-filter">
+									<div class="collapse-filter_wrapper">
+										<div class="row g-1">
+											<div class="col-xl-1 col-lg-2 col-6">
+												<div class="theme-form">
+													<input placeholder="Mã bệnh nhân" type="text"
+													       class="form-control theme-input">
+												</div>
+											</div>
+											<div class="col-xl-1 col-lg-2 col-6">
+												<div class="theme-form">
+													<input placeholder="Số điện thoại" type="text"
+													       class="form-control theme-input">
+												</div>
+											</div>
+											<div class="col-xl-1 col-lg-2 col-12">
+												<div class="theme-form">
+													<input placeholder="Số CCCD" type="text"
+													       class="form-control theme-input">
+												</div>
+											</div>
+											<div class="col-xl-9 col-lg-6">
+												<div class="theme-form justify-content-center justify-content-sm-start">
+													<div class="theme-form_groups">
+														<div class="theme-form_icon theme-form_calendar">
+															<input type="text"
+															       class="form-control theme-input initDateRangePicker">
+														</div>
+														<div class="theme-form_groups__icon">
+															<img src="./assets/images/icons/icon-arrow-left.png" alt="">
+														</div>
+														<div class="theme-form_icon theme-form_calendar">
+															<input type="text"
+															       class="form-control theme-input initDateRangePicker">
+														</div>
+													</div>
+													<div class="text-center text-lg-start">
+														<button type="button" class="button-theme button-theme_primary">
+															<i class="fal fa-search"></i>
+															Tìm kiếm
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="section-table">
+							<div class="table-responsive theme-table">
+								<table class="table table-bordered table-hover align-middle">
+									<thead>
+									<tr>
+										<th>
+											ID
+										</th>
+										<th>
+											Mã bệnh nhân
+										</th>
+										<th>
+											Tên bệnh nhân
+										</th>
+										<th>
+											Số CCCD
+										</th>
+										<th>
+											Đối tượng
+										</th>
+										<th>
+											Giới tính
+										</th>
+										<th>
+											Địa chỉ
+										</th>
+										<th>
+											Ngày sinh
+										</th>
+										<th>
+											Tên phòng
+										</th>
+										<th>
+											Tên dịch vụ
+										</th>
+										<th>
+											Lý do khám
+										</th>
+										<th>
+											Số tiếp đoán
+										</th>
+										<th>
+											Thời gian tiếp đón
+										</th>
+										<th>
+											Trạng thái
+										</th>
+										<th>
+											Ưu tiên
+										</th>
+										<th>
+											Bác sĩ
+										</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-success fw-bold table-status">
+												Đã khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-check.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-danger fw-bold table-status">
+												Không khám
+											</div>
+										</td>
+										<td>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-secondary fw-bold table-status">
+												Chờ khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-delete.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-success fw-bold table-status">
+												Đã khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-check.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-danger fw-bold table-status">
+												Không khám
+											</div>
+										</td>
+										<td>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-secondary fw-bold table-status">
+												Chờ khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-delete.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-success fw-bold table-status">
+												Đã khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-check.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-danger fw-bold table-status">
+												Không khám
+											</div>
+										</td>
+										<td>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-secondary fw-bold table-status">
+												Chờ khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-delete.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-success fw-bold table-status">
+												Đã khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-check.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-danger fw-bold table-status">
+												Không khám
+											</div>
+										</td>
+										<td>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-secondary fw-bold table-status">
+												Chờ khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-delete.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-success fw-bold table-status">
+												Đã khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-check.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-danger fw-bold table-status">
+												Không khám
+											</div>
+										</td>
+										<td>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-end">
+												89
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												203262
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Testupdate
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												123456789123
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Viện phí
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nam
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												2000
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Phòng khám 01
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Khám tai mũi họng
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												testupdate
+											</div>
+										</td>
+										<td>
+											<div class="text-end">
+												150
+											</div>
+										</td>
+										<td>
+											<div class="table-text">11:25 21/11/2023</div>
+										</td>
+										<td>
+											<div class="text-secondary fw-bold table-status">
+												Chờ khám
+											</div>
+										</td>
+										<td>
+											<div class="text-center theme-table_image">
+												<img src="./assets/images/icons/icon-delete.png" class="img-fluid"
+												     alt="">
+											</div>
+										</td>
+										<td>
+											<div class="table-text">
+												Nguyễn Văn ABC
+											</div>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section-footer">
+		<div class="container-fluid g-0">
+			<div class="row g-1 align-items-center flex-row-reverse flex-lg-row">
+				<div class="col-lg-6">
+					<div class="footer-text text-center text-lg-start">
+						Tổng cộng: <b>7500</b> dòng dữ liệu
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="section-pagination">
+						<ul class="pagination justify-content-center justify-content-lg-end">
+							<li class="page-item">
+								<a class="page-link" href="#">
+									<i class="fal fa-angle-left"></i>
+								</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">
+									1
+								</a>
+							</li>
+							<li class="page-item active">
+								<a class="page-link" href="#">
+									2
+								</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">
+									3
+								</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">
+									<i class="fal fa-angle-right"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
