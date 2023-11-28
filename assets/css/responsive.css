@@ -206,18 +206,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-	.box-item_collapse .box-item_title {
-		margin-bottom: 0;
-		padding-bottom: 0;
-		border-bottom: 0;
-	}
-
-	.box-item_collapse .collapse-filter .collapse-filter_wrapper {
-		margin-top: 5px;
-		padding-top: 5px;
-		border-top: 1px solid var(--bs-gray-400);
-	}
-
 	.section-main {
 		padding: 0;
 	}
@@ -227,11 +215,11 @@
 	}
 
 	.container-fluid {
-		padding: 0 5px;
+		padding: 0 10px;
 	}
 
 	.section-buttons {
-		padding-bottom: 13px;
+		padding-bottom: 18px;
 	}
 
 	.section-buttons .container-fluid {

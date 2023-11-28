@@ -260,7 +260,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .section-buttons {
-	padding: 10px 5px;
+	padding: 10px;
 	background-color: #015E70;
 }
 
@@ -326,7 +326,7 @@ body::-webkit-scrollbar-thumb:hover {
 	position: relative;
 	overflow: hidden;
 	font-size: 0.925em;
-	padding: 6px 6px;
+	padding: 0;
 	font-weight: 500;
 	transition: var(--transition-default);
 	height: 28px;
@@ -334,9 +334,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .theme-input ~ .select2-container .select2-selection--single .select2-selection__rendered {
-	line-height: 14px;
+	line-height: 1;
 	color: var(--bs-black);
-	padding: 0 20px 0 0;
+	padding: 7px 20px 7px 6px;
 }
 
 .theme-input ~ .select2-container .select2-selection--single .select2-selection__arrow {
@@ -383,6 +383,10 @@ body::-webkit-scrollbar-thumb:hover {
 .theme-input ~ .select2-container.select2-container--disabled .select2-selection--single {
 	background-color: #e5e5e5;
 	cursor: not-allowed;
+}
+
+.theme-input ~ .select2-container .select2-results__option--highlighted[aria-selected]{
+	background: #015E70;
 }
 
 .theme-form_icon {
@@ -458,7 +462,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .section-main {
 	background: #f0f0f0;
-	padding: 10px 5px;
+	padding: 15px 10px;
 }
 
 .box-item {
@@ -489,9 +493,9 @@ body::-webkit-scrollbar-thumb:hover {
 .box-item_divider {
 	border-top: 1px solid #9f9f9f;
 	border-bottom: 1px solid #9f9f9f;
-	margin: 0 -5px;
-	width: calc(100% + 10px);
-	padding: 5px;
+	margin: 0 -10px;
+	width: calc(100% + 20px);
+	padding: 10px;
 }
 
 .box-item .box-item_title {
@@ -514,8 +518,8 @@ body::-webkit-scrollbar-thumb:hover {
 .section-table {
 	background-color: var(--bs-white);
 	border-radius: 4px;
-	margin: 0 -5px;
-	width: calc(100% + 10px);
+	margin: 0 -10px;
+	width: calc(100% + 20px);
 }
 
 .theme-table .table {
