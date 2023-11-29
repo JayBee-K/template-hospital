@@ -169,6 +169,7 @@ const handleInitSelect2 = function () {
 	}
 }
 
+
 const handleInitDateRangePicker = function () {
 	$('.initDateRangePicker').each(function () {
 		let format = 'DD-MM-YYYY';
@@ -244,7 +245,7 @@ $(function () {
 	$(window).resize(function () {
 		handleApplyCollapse($('#header-navigation > ul'));
 		handleCallMenu();
-	})
+	});
 
 	handleCopyValue();
 	handleViewPass();

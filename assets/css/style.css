@@ -1,5 +1,8 @@
 body {
 	padding-bottom: 27px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 body::-webkit-scrollbar {
@@ -259,6 +262,12 @@ body::-webkit-scrollbar-thumb:hover {
 	height: 16px;
 }
 
+.main {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+}
+
 .section-buttons {
 	padding: 10px;
 	background-color: #015E70;
@@ -316,7 +325,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .theme-form > .theme-label ~ .theme-input,
-.theme-form > .theme-input ~ .select2 {
+.theme-form > .theme-label ~ .theme-input ~ .select2 {
 	max-width: calc(100% - 105px) !important;
 }
 
@@ -353,6 +362,15 @@ body::-webkit-scrollbar-thumb:hover {
 .theme-input ~ .select2-container .select2-dropdown {
 	border: 1px solid #9f9f9f;
 	font-size: 0.925em;
+	border-radius: 0;
+}
+
+.theme-input ~ .select2-container .select2-dropdown.select2-dropdown--above {
+	border-bottom: 0;
+}
+
+.theme-input ~ .select2-container .select2-dropdown.select2-dropdown--below {
+	border-top: 0;
 }
 
 .theme-input ~ .select2-container .select2-search--dropdown .select2-search__field {
@@ -385,7 +403,7 @@ body::-webkit-scrollbar-thumb:hover {
 	cursor: not-allowed;
 }
 
-.theme-input ~ .select2-container .select2-results__option--highlighted[aria-selected]{
+.theme-input ~ .select2-container .select2-results__option--highlighted[aria-selected] {
 	background: #015E70;
 }
 
@@ -461,8 +479,13 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .section-main {
+	--spacing-y: 15px;
+	--spacing-x: 10px;
 	background: #f0f0f0;
-	padding: 15px 10px;
+	padding: var(--spacing-y) var(--spacing-x);
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
 }
 
 .box-item {
@@ -576,6 +599,21 @@ body::-webkit-scrollbar-thumb:hover {
 	color: var(--bs-black);
 }
 
+.section-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 3px;
+}
+
+.section-pagination .theme-form {
+	width: auto;
+}
+
+.section-pagination .theme-form .theme-input {
+	max-width: 60px;
+}
+
 .section-pagination .pagination {
 	margin-bottom: 0;
 	gap: 3px;
@@ -592,8 +630,8 @@ body::-webkit-scrollbar-thumb:hover {
 	-ms-flex-pack: center;
 	justify-content: center;
 	vertical-align: middle;
-	border: 1px solid #aaaaaa;
-	border-radius: 2px;
+	border: 1px solid #9e9e9e;
+	border-radius: 0;
 	gap: 5px;
 	position: relative;
 	overflow: hidden;
@@ -602,21 +640,13 @@ body::-webkit-scrollbar-thumb:hover {
 	font-weight: 500;
 	transition: var(--transition-default);
 	height: 26px;
-	background-color: var(--bg-1);
-	background-image: -moz-linear-gradient(top, var(--bg-1), var(--bg-2));
-	background-image: -ms-linear-gradient(top, var(--bg-1), var(--bg-2));
-	background-image: -o-linear-gradient(top, var(--bg-1), var(--bg-2));
-	background-image: linear-gradient(top, var(--bg-1), var(--bg-2));
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--bg-1)), color-stop(100%, var(--bg-2)));
-	background-image: -webkit-linear-gradient(top, var(--bg-1), var(--bg-2));
-	--bg-1: #eeeeee;
-	--bg-2: #cccccc;
+	background: #fff;
 	color: var(--bs-black) !important;
-	text-shadow: 0 1px 0 var(--bg-1);
 	min-width: 26px;
-	font-size: .925em;
 	margin: 0;
 	padding: 0;
+	outline: none;
+	box-shadow: none;
 }
 
 .section-pagination .pagination .page-link:hover {
@@ -624,10 +654,14 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .section-pagination .pagination .active .page-link {
-	background: var(--primary-color);
-	color: var(--bs-white) !important;
+	background: #ffffe1;
 	text-shadow: none;
-	border-color: var(--primary-color);
+	border-color: #d79920;
+}
+
+.section-pagination .pagination .disabled .page-link {
+	opacity: .6;
+	background: #e1e1e1;
 }
 
 .modal-default.fade .modal-dialog {
@@ -675,4 +709,149 @@ body::-webkit-scrollbar-thumb:hover {
 
 .modal-default .modal-form {
 	padding: 30px;
+}
+
+.section-heading {
+	background: #b9d1eb;
+	padding: 8px 10px;
+}
+
+.section-heading .heading-title {
+	font-size: 1.15em;
+	font-weight: 700;
+	color: var(--bs-black);
+}
+
+.section-heading .heading-name {
+	font-size: 1em;
+	font-weight: 700;
+	color: var(--bs-black);
+}
+
+.section-tab .nav-tabs {
+	margin-bottom: 0;
+}
+
+.section-tab .nav-tabs .nav-link {
+	padding: 3px 5px;
+	font-size: .925em;
+	font-weight: 500;
+	outline: none;
+	box-shadow: none;
+	border: 1px solid #d0d0d0;
+	background: #f0f0f0;
+}
+
+.section-tab .nav-tabs .nav-link.active {
+	border-color: transparent;
+	background: var(--bs-white);
+}
+
+.section-tab .tab-inner {
+	background: var(--bs-white);
+	padding: 5px;
+	border: 1px solid #d0d0d0;
+}
+
+.section-checkup {
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.scrollable-content {
+	position: absolute;
+	max-height: 100%;
+	overflow-y: auto;
+	top: 0;
+	left: 0;
+	right: -5px;
+	bottom: 0;
+}
+
+.scrollable-content::-webkit-scrollbar {
+	width: 5px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+	background: #fff;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+	background: #acacac;
+	border-radius: 5px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+	background: #7b7b7b;
+}
+
+.section-list {
+	background: #f0f0f0;
+}
+
+.patient-card {
+	border: 1px solid #9f9f9f;
+	padding: 10px;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.patient-card .card-icon {
+	width: 20px;
+	flex-shrink: 0;
+	position: relative;
+}
+
+.patient-card .card-icon:before {
+	padding-top: 20px;
+	display: block;
+	content: "";
+}
+
+.patient-card .card-icon img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.patient-card .card-content {
+	width: 100%;
+	line-height: 1.4;
+}
+
+.patient-card .card-content .card-code {
+	--line: 1;
+	font-size: 0.925em;
+	font-weight: 700;
+	color: var(--bs-black);
+}
+
+.patient-card .card-content .card-meta {
+	display: flex;
+	align-items: center;
+	font-size: .85em;
+	color: var(--bs-danger);
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+.patient-card .card-content .card-meta .card-meta_item + .card-meta_item:before {
+	content: "- ";
+	padding-left: 5px;
+}
+
+.patient-card .card-time {
+	color: #9a9a9a;
+	font-size: 0.85em;
+	text-align: right;
+	max-width: 60px;
+	flex-shrink: 0;
+}
+
+.vstack.flex-fill .tab-pane.show.active {
+	display: flex;
 }

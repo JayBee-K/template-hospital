@@ -7,6 +7,16 @@
 	.collapse-filter {
 		display: block !important;
 	}
+
+	.col-xl-20 {
+		flex: 0 0 auto;
+		width: 20%;
+	}
+
+	.col-xl-80 {
+		flex: 0 0 auto;
+		width: 80%;
+	}
 }
 
 @media screen and (max-width: 1536px) {
@@ -200,14 +210,15 @@
 	}
 
 	.theme-form > .theme-label ~ .theme-input,
-	.theme-form > .theme-input ~ .select2 {
+	.theme-form > .theme-label ~ .theme-input ~ .select2 {
 		max-width: 100% !important;
 	}
 }
 
 @media screen and (max-width: 1200px) {
 	.section-main {
-		padding: 0;
+		--spacing-y: 0;
+		--spacing-x: 0;
 	}
 
 	.theme-table .table tr > * {
@@ -216,10 +227,6 @@
 
 	.container-fluid {
 		padding: 0 10px;
-	}
-
-	.section-buttons {
-		padding-bottom: 18px;
 	}
 
 	.section-buttons .container-fluid {
@@ -247,6 +254,10 @@
 
 	.section-buttons .section-buttons_list .section-buttons_list__item {
 		flex: 1 1 auto;
+		justify-content: center;
+	}
+
+	.section-pagination {
 		justify-content: center;
 	}
 }
