@@ -123,16 +123,6 @@ textarea:focus {
 	-webkit-box-orient: vertical;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
-
-input[type='number'] {
-	-moz-appearance: textfield;
-}
-
 .form-mobile input[type=date]::-webkit-inner-spin-button,
 .form-mobile input[type=date]::-webkit-calendar-picker-indicator,
 .form-mobile input[type=datetime-local]::-webkit-inner-spin-button,
