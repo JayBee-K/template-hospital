@@ -808,7 +808,7 @@
 								        data-bs-target="#tab-thongtinbenhnhan" type="button">
 									Thông tin bệnh nhân
 								</button>
-								<button class="nav-link active m-0 text-black rounded-0 link-default"
+								<button class="nav-link m-0 text-black rounded-0 link-default"
 								        data-bs-toggle="tab"
 								        data-bs-target="#tab-khambenh"
 								        type="button">
@@ -832,7 +832,7 @@
 								        type="button">
 									Thanh toán
 								</button>
-								<button class="nav-link m-0 text-black rounded-0 link-default"
+								<button class="nav-link m-0 active text-black rounded-0 link-default"
 								        data-bs-toggle="tab"
 								        data-bs-target="#tab-xutri"
 								        type="button">
@@ -849,7 +849,15 @@
 						<div class="tab-content">
 							<div class="tab-pane fade" id="tab-thongtinbenhnhan">
 							</div>
-							<div class="tab-pane fade show active" id="tab-khambenh">
+							<div class="tab-pane fade" id="tab-khambenh">
+							</div>
+							<div class="tab-pane fade" id="tab-donthuoc">
+							</div>
+							<div class="tab-pane fade" id="tab-dichvu">
+							</div>
+							<div class="tab-pane fade" id="tab-thanhtoan">
+							</div>
+							<div class="tab-pane fade show active" id="tab-xutri">
 								<div class="information-body">
 									<div class="row g-3">
 										<div class="col-lg-9">
@@ -1013,8 +1021,8 @@
 																	Chẩn đoán kèm theo
 																</div>
 																<div class="section-table w-100 m-0">
-																	<div class="theme-table theme-table_height dragscroll overflow-hidden">
-																		<table class="table table-bordered table-hover">
+																	<div class="theme-table dragscroll overflow-hidden">
+																		<table class="table table-bordered table-hover table-white align-middle">
 																			<thead>
 																			<tr>
 																				<th class="table-column-maxw50"></th>
@@ -1028,6 +1036,31 @@
 																				<td class="table-column-maxw50">1</td>
 																				<td>01 - Bệnh ABC</td>
 																				<td>Đau đầu, đau toàn thân, mắt mờ, chân
+																				    mỏi...
+																				</td>
+																				<td>
+																					<div class="hstack gap-5px justify-content-center">
+																						<button type="button"
+																						        class="button-theme button-theme_primary button-theme_icon">
+																							<img src="./assets/images/icons/icon-edit.png"
+																							     class="img-fluid"
+																							     alt="">
+																						</button>
+																						<button type="button"
+																						        class="button-theme button-theme_danger button-theme_icon">
+																							<img src="./assets/images/icons/icon-delete-white.png"
+																							     class="img-fluid"
+																							     alt="">
+																						</button>
+																					</div>
+																				</td>
+																			</tr>
+																			<tr>
+																				<td class="table-column-maxw50">1</td>
+																				<td>01 - Bệnh ABC</td>
+																				<td>Đau đầu, đau toàn thân, mắt mờ, chân
+																				    mỏi...
+																				    Đau đầu, đau toàn thân, mắt mờ, chân
 																				    mỏi...
 																				</td>
 																				<td>
@@ -1159,14 +1192,6 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="tab-pane fade" id="tab-donthuoc">
-							</div>
-							<div class="tab-pane fade" id="tab-dichvu">
-							</div>
-							<div class="tab-pane fade" id="tab-thanhtoan">
-							</div>
-							<div class="tab-pane fade" id="tab-xutri">
 							</div>
 							<div class="tab-pane fade" id="tab-benhan">
 							</div>
