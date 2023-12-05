@@ -624,6 +624,39 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 	background: #7b7b7b;
 }
 
+.theme-table.theme-table_height {
+	height: var(--height);
+	max-height: var(--height);
+	overflow-y: auto;
+	border: 1px solid #dee2e6;
+}
+
+.theme-table.theme-table_height::-webkit-scrollbar {
+	width: 5px;
+}
+
+.theme-table.theme-table_height::-webkit-scrollbar-track {
+	background: #fff;
+}
+
+.theme-table.theme-table_height::-webkit-scrollbar-thumb {
+	background: #acacac;
+	border-radius: 5px;
+}
+
+.theme-table.theme-table_height::-webkit-scrollbar-thumb:hover {
+	background: #7b7b7b;
+}
+
+.theme-table.theme-table_height .table {
+	border: 0 solid transparent;
+	border-bottom: 1px solid #dee2e6;
+}
+
+.theme-table.theme-table_height .table td {
+	border-color: #dee2e6;
+}
+
 .theme-table .table {
 	font-size: 0.925em;
 	margin-bottom: 0;
