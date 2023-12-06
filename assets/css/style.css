@@ -346,7 +346,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 }
 
 .theme-input[required] {
-	background: #ffffe1;
+	background-color: #ffffe1 !important;
 }
 
 .theme-input::placeholder {
