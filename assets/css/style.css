@@ -107,10 +107,26 @@ body::-webkit-scrollbar-thumb:hover {
 	padding: 3px 6px;
 }
 
+.button-theme.button-theme_xs {
+	--position-y: -20px;
+	height: 22px;
+	width: 22px;
+	padding: 0;
+}
+
+.button-theme.button-theme_xs > img {
+	width: 14px;
+	height: 14px;
+}
+
 .button-theme.button-theme_icon {
 	--position-y: -24px;
 	height: 26px;
 	padding: 3px 4px;
+}
+
+.button-theme.button-theme_circle {
+	border-radius: 50%;
 }
 
 .button-theme.button-theme_transparent {
