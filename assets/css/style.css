@@ -83,7 +83,6 @@ body::-webkit-scrollbar-thumb:hover {
 	border-color: #aaaaaa;
 }
 
-
 .button-theme.button-theme_primary {
 	--bg-1: var(--primary-color);
 	--bg-2: var(--primary-hover);
@@ -122,6 +121,7 @@ body::-webkit-scrollbar-thumb:hover {
 	background-position: center var(--position-y);
 }
 
+.link-default img,
 .button-theme img {
 	width: 16px;
 	height: 16px;
