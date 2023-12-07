@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>Template Cpanel Hospital</title>
+	<meta name="description" content="Template Cpanel Hospital">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Template Cpanel Hospital">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template Cpanel Hospital">
+	<meta property="og:image" content="">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
+	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/responsive.css">
+
+	<style>
+		:root {
+			--primary-color: #00A2A5;
+			--primary-hover: #008588;
+			--primary-rgb: 0, 162, 165;
+			--secondary-color: #BB9A77;
+			--secondary-hover: #a27b51;
+			--secondary-rgb: 187, 154, 119;
+		}
+	</style>
+</head>
+<body>
+
+<header id="header" class="header">
+	<div class="container-fluid g-0">
+		<div class="header-main hstack gap-10px">
+			<div class="header-logo">
+				<a href="./" class="d-inline-block align-items-center">
+					<img src="./assets/images/logo.png" alt="">
+				</a>
+			</div>
+			<div id="header-navigation" class="header-navigation">
+				<ul>
+					<li>
+						<a class="active" href="./">
+							<span><img src="./assets/images/icons/trang-chu.png" class="img-fluid" alt=""></span>
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/don-tiep.png" class="img-fluid" alt=""></span>
+							Đón tiếp
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/kham-benh.png" class="img-fluid" alt=""></span>
+							Khám bệnh
+							<i class="fas fa-caret-down"></i>
+						</a>
+						<ul>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/lay-mau.png" class="img-fluid" alt=""></span>
+							Lấy máu
+							<i class="fas fa-caret-down"></i>
+						</a>
+						<ul>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/xet-nghiem.png" class="img-fluid" alt=""></span>
+							Xét nghiệm
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/ris.png" class="img-fluid" alt=""></span>
+							RIS
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/benh-nhan.png" class="img-fluid" alt=""></span>
+							Bệnh nhân
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/dieu-tri.png" class="img-fluid" alt=""></span>
+							Điều trị
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/nha-thuoc.png" class="img-fluid" alt=""></span>
+							Nhà thuốc
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/kho-thuoc.png" class="img-fluid" alt=""></span>
+							Quản lý kho thuốc
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/danh-muc.png" class="img-fluid" alt=""></span>
+							Danh mục
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/thu-ngan.png" class="img-fluid" alt=""></span>
+							Thu ngân
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/bao-hiem.png" class="img-fluid" alt=""></span>
+							BHYT
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/bao-cao.png" class="img-fluid" alt=""></span>
+							Báo cáo
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/he-thong.png" class="img-fluid" alt=""></span>
+							Hệ thống
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="header-actions hstack gap-10px">
+				<div class="header-language header-dropdown">
+					<button type="button" class="link-default hstack gap-5px" data-bs-toggle="dropdown">
+						<img src="./assets/images/language/vn.png" class="img-fluid" alt="">
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/vn.png" class="img-fluid" alt="">
+								Tiếng Việt
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/en.png" class="img-fluid" alt="">
+								Tiếng Anh
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/cn.png" class="img-fluid" alt="">
+								Tiếng Trung
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-user header-dropdown">
+					<button type="button" class="link-default hstack gap-5px" data-bs-toggle="dropdown">
+						<img src="./assets/images/user/avatar.png" class="img-fluid" alt="">
+						Tài khoản
+						<i class="fas fa-caret-down"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<a class="dropdown-item" href="#">
+								Đăng nhập
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Đăng ký
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Thông tin tài khoản
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Đổi mật khẩu
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="header-hamburger">
+				<button type="button" class="hamburger-button" id="hamburger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="header-overlay" id="header-overlay"></div>
+		</div>
+	</div>
+</header>
+<div id="main" class="main">
+	<div class="section-buttons bg-white">
+		<div class="container-fluid g-0">
+			<div class="section-buttons_list hstack gap-15px justify-content-between">
+				<div class="section-buttons_list__item hstack gap-10px">
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-fire.png" class="img-fluid" alt="">
+						Ưu tiên
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-list.png" class="img-fluid" alt="">
+						Danh sách
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-donthuoc.png" class="img-fluid" alt="">
+						Đơn thuốc
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-payment.png" class="img-fluid" alt="">
+						Thanh toán
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-stop.png" class="img-fluid" alt="">
+						Dừng khm
+					</a>
+				</div>
+				<div class="section-buttons_list__item hstack gap-10px">
+					<div class="box-form">
+						<button type="button" class="button-theme button-theme_light">
+							<img src="./assets/images/icons/icon-loa.png" class="img-fluid" alt="">
+							Gọi số tiếp
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section-heading hstack gap-20px">
+		<div class="heading-title">
+			Khoa khám bệnh
+		</div>
+		<div class="heading-name">
+			B/s: Nguyễn Văn Vương
+		</div>
+	</div>
+	<div class="section-main section-checkup">
+		<div class="container-fluid g-0 vstack">
+			<div class="row g-2 g-xl-2 flex-fill">
+				<div class="col-xl-20 vstack">
+					<div class="section-sidebar vstack">
+						<div class="section-tab vstack flex-fill">
+							<div class="nav nav-tabs mb-0 border-bottom-0" id="nav-tab" role="tablist">
+								<button class="nav-link active m-0 text-black rounded-0 link-default"
+								        data-bs-toggle="tab"
+								        data-bs-target="#tab-tatca" type="button">
+									Tất cả (13)
+								</button>
+								<button class="nav-link m-0 text-black rounded-0 link-default" data-bs-toggle="tab"
+								        data-bs-target="#tab-baohiem"
+								        type="button">
+									Bảo hiểm (0)
+								</button>
+							</div>
+							<div class="tab-content vstack">
+								<div class="tab-pane fade show active flex-fill" id="tab-tatca">
+									<div class="tab-inner vstack flex-fill gap-5px">
+										<div class="d-flex flex-column gap-5px">
+											<div class="theme-form">
+												<select data-placeholder-search="Tìm kiếm tên tỉnh/TP" name=""
+												        class="form-select theme-input theme-input_white initSelect2"
+												        id="">
+													<option value="">
+														Tất cả bệnh viện
+													</option>
+													<option value="">
+														Bệnh viện 1
+													</option>
+													<option value="">
+														Bệnh viện 2
+													</option>
+													<option value="">
+														Bệnh viện 3
+													</option>
+													<option value="">
+														Bệnh viện 4
+													</option>
+													<option value="">
+														Bệnh viện 5
+													</option>
+													<option value="">
+														Bệnh viện 6
+													</option>
+													<option value="">
+														Bệnh viện 7
+													</option>
+													<option value="">
+														Bệnh viện 8
+													</option>
+													<option value="">
+														...
+													</option>
+												</select>
+											</div>
+											<div class="theme-form justify-content-center justify-content-sm-start">
+												<div class="theme-form_groups">
+													<div class="theme-form_icon theme-form_calendar">
+														<input type="text"
+														       class="form-control theme-input initDateRangePicker">
+													</div>
+													<div class="theme-form_groups__icon">
+														<img src="./assets/images/icons/icon-arrow-left.png"
+														     alt="">
+													</div>
+													<div class="theme-form_icon theme-form_calendar">
+														<input type="text"
+														       class="form-control theme-input initDateRangePicker">
+													</div>
+												</div>
+											</div>
+											<div class="theme-form">
+												<input placeholder="Nhập Mã BN, Tên..." type="text" required
+												       class="form-control theme-input">
+											</div>
+										</div>
+										<div class="section-list vstack gap-5px position-relative">
+											<div class="scrollable-content">
+												<div class="vstack gap-5px">
+													<div class="list-item">
+														<div class="card patient-card hstack rounded-0">
+															<div class="card-icon">
+																<img src="./assets/images/icons/icon-minus.png"
+																     alt="">
+															</div>
+															<div class="card-content">
+																<div class="card-code limit">
+																	1412414 - 2000
+																</div>
+																<div class="card-meta">
+																	<div class="card-meta_item">
+																		2023103
+																	</div>
+																	<div class="card-meta_item">
+																		Bảo hiểm
+																	</div>
+																	<div class="card-meta_item">
+																		Khám bệnh
+																	</div>
+																</div>
+															</div>
+															<div class="card-time">
+																18 ngày trước
+															</div>
+														</div>
+													</div>
+													<div class="list-item">
+														<div class="card patient-card hstack rounded-0">
+															<div class="card-icon">
+																<img src="./assets/images/icons/icon-dot.png"
+																     alt="">
+															</div>
+															<div class="card-content">
+																<div class="card-code limit">
+																	12 - 2012
+																</div>
+																<div class="card-meta">
+																	<div class="card-meta_item">
+																		2023103
+																	</div>
+																	<div class="card-meta_item">
+																		Bảo hiểm
+																	</div>
+																	<div class="card-meta_item">
+																		Cấp cứu
+																	</div>
+																</div>
+															</div>
+															<div class="card-time">
+																18 ngày trước
+															</div>
+														</div>
+													</div>
+													<div class="list-item">
+														<div class="card patient-card hstack rounded-0">
+															<div class="card-icon">
+																<img src="./assets/images/icons/icon-times.png"
+																     alt="">
+															</div>
+															<div class="card-content">
+																<div class="card-code limit">
+																	12 - 2012
+																</div>
+																<div class="card-meta">
+																	<div class="card-meta_item">
+																		2023103
+																	</div>
+																	<div class="card-meta_item">
+																		Yêu cầu
+																	</div>
+																	<div class="card-meta_item">
+																		Khám bệnh
+																	</div>
+																</div>
+															</div>
+															<div class="card-time">
+																18 ngày trước
+															</div>
+														</div>
+													</div>
+													<div class="list-item">
+														<div class="card patient-card hstack rounded-0">
+															<div class="card-icon">
+																<img src="./assets/images/icons/icon-minus.png"
+																     alt="">
+															</div>
+															<div class="card-content">
+																<div class="card-code limit">
+																	1412414 - 2000
+																</div>
+																<div class="card-meta">
+																	<div class="card-meta_item">
+																		2023103
+																	</div>
+																	<div class="card-meta_item">
+																		Bảo hiểm
+																	</div>
+																	<div class="card-meta_item">
+																		Khám bệnh
+																	</div>
+																</div>
+															</div>
+															<div class="card-time">
+																18 ngày trước
+															</div>
+														</div>
+													</div>
+													<div class="list-item">
+														<div class="card patient-card hstack rounded-0">
+															<div class="card-icon">
+																<img src="./assets/images/icons/icon-dot.png"
+																     alt="">
+															</div>
+															<div class="card-content">
+																<div class="card-code limit">
+																	12 - 2012
+																</div>
+																<div class="card-meta">
+																	<div class="card-meta_item">
+																		2023103
+																	</div>
+																	<div class="card-meta_item">
+																		Bảo hiểm
+																	</div>
+																	<div class="card-meta_item">
+																		Cấp cứu
+																	</div>
+																</div>
+															</div>
+															<div class="card-time">
+																18 ngày trước
+															</div>
+														</div>
+													</div>
+													<div class="list-item">
+														<div class="card patient-card hstack rounded-0">
+															<div class="card-icon">
+																<img src="./assets/images/icons/icon-times.png"
+																     alt="">
+															</div>
+															<div class="card-content">
+																<div class="card-code limit">
+																	12 - 2012
+																</div>
+																<div class="card-meta">
+																	<div class="card-meta_item">
+																		2023103
+																	</div>
+																	<div class="card-meta_item">
+																		Yêu cầu
+																	</div>
+																	<div class="card-meta_item">
+																		Khám bệnh
+																	</div>
+																</div>
+															</div>
+															<div class="card-time">
+																18 ngày trước
+															</div>
+														</div>
+													</div>
+													<div class="list-item">
+														<div class="card patient-card hstack rounded-0">
+															<div class="card-icon">
+																<img src="./assets/images/icons/icon-minus.png"
+																     alt="">
+															</div>
+															<div class="card-content">
+																<div class="card-code limit">
+																	1412414 - 2000
+																</div>
+																<div class="card-meta">
+																	<div class="card-meta_item">
+																		2023103
+																	</div>
+																	<div class="card-meta_item">
+																		Bảo hiểm
+																	</div>
+																	<div class="card-meta_item">
+																		Khám bệnh
+																	</div>
+																</div>
+															</div>
+															<div class="card-time">
+																18 ngày trước
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="section-pagination">
+											<div class="theme-form">
+												<input placeholder="Trang" type="text"
+												       class="form-control theme-input">
+											</div>
+											<ul class="pagination justify-content-center justify-content-lg-end">
+												<li class="page-item disabled">
+													<a class="page-link" href="#">
+														<i class="fas fa-angle-double-left"></i>
+													</a>
+												</li>
+												<li class="page-item disabled">
+													<a class="page-link" href="#">
+														<i class="fas fa-angle-left"></i>
+													</a>
+												</li>
+												<li class="page-item active">
+													<a class="page-link" href="#">
+														1
+													</a>
+												</li>
+												<li class="page-item">
+													<a class="page-link" href="#">
+														2
+													</a>
+												</li>
+												<li class="page-item">
+													<a class="page-link" href="#">
+														3
+													</a>
+												</li>
+												<li class="page-item">
+													<a class="page-link" href="#">
+														<i class="fas fa-angle-right"></i>
+													</a>
+												</li>
+												<li class="page-item">
+													<a class="page-link" href="#">
+														<i class="fas fa-angle-double-right"></i>
+													</a>
+												</li>
+											</ul>
+											<div class="theme-form">
+												<select class="form-select theme-input theme-input_white"
+												        id="">
+													<option value="">
+														10
+													</option>
+													<option value="">
+														20
+													</option>
+													<option value="">
+														30
+													</option>
+													<option value="">
+														50
+													</option>
+													<option value="">
+														100
+													</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade flex-fill" id="tab-baohiem">
+									<div class="tab-inner vstack flex-fill gap-5px">
+										<div class="d-flex flex-column gap-5px">
+											<div class="theme-form">
+												<select data-placeholder-search="Tìm kiếm tên tỉnh/TP" name=""
+												        class="form-select theme-input theme-input_white initSelect2"
+												        id="">
+													<option value="">
+														Tất cả bệnh viện
+													</option>
+													<option value="">
+														Bệnh viện 1
+													</option>
+													<option value="">
+														Bệnh viện 2
+													</option>
+													<option value="">
+														Bệnh viện 3
+													</option>
+													<option value="">
+														Bệnh viện 4
+													</option>
+													<option value="">
+														Bệnh viện 5
+													</option>
+													<option value="">
+														Bệnh viện 6
+													</option>
+													<option value="">
+														Bệnh viện 7
+													</option>
+													<option value="">
+														Bệnh viện 8
+													</option>
+													<option value="">
+														...
+													</option>
+												</select>
+											</div>
+											<div class="theme-form justify-content-center justify-content-sm-start">
+												<div class="theme-form_groups">
+													<div class="theme-form_icon theme-form_calendar">
+														<input type="text"
+														       class="form-control theme-input initDateRangePicker">
+													</div>
+													<div class="theme-form_groups__icon">
+														<img src="./assets/images/icons/icon-arrow-left.png"
+														     alt="">
+													</div>
+													<div class="theme-form_icon theme-form_calendar">
+														<input type="text"
+														       class="form-control theme-input initDateRangePicker">
+													</div>
+												</div>
+											</div>
+											<div class="theme-form">
+												<input placeholder="Nhập Mã BN, Tên..." type="text" required
+												       class="form-control theme-input">
+											</div>
+										</div>
+										<div class="section-list vstack gap-5px position-relative">
+											<div class="scrollable-content">
+											</div>
+										</div>
+										<div class="section-pagination">
+											<div class="theme-form">
+												<input placeholder="Trang" type="text"
+												       class="form-control theme-input">
+											</div>
+											<ul class="pagination justify-content-center justify-content-lg-end">
+												<li class="page-item disabled">
+													<a class="page-link" href="#">
+														<i class="fas fa-angle-double-left"></i>
+													</a>
+												</li>
+												<li class="page-item disabled">
+													<a class="page-link" href="#">
+														<i class="fas fa-angle-left"></i>
+													</a>
+												</li>
+												<li class="page-item active">
+													<a class="page-link" href="#">
+														1
+													</a>
+												</li>
+												<li class="page-item">
+													<a class="page-link" href="#">
+														2
+													</a>
+												</li>
+												<li class="page-item">
+													<a class="page-link" href="#">
+														3
+													</a>
+												</li>
+												<li class="page-item">
+													<a class="page-link" href="#">
+														<i class="fas fa-angle-right"></i>
+													</a>
+												</li>
+												<li class="page-item">
+													<a class="page-link" href="#">
+														<i class="fas fa-angle-double-right"></i>
+													</a>
+												</li>
+											</ul>
+											<div class="theme-form">
+												<select class="form-select theme-input theme-input_white"
+												        id="">
+													<option value="">
+														10
+													</option>
+													<option value="">
+														20
+													</option>
+													<option value="">
+														30
+													</option>
+													<option value="">
+														50
+													</option>
+													<option value="">
+														100
+													</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-80">
+					<div class="section-heading bg-transparent px-0 hstack gap-20px">
+						<div class="heading-title">
+							TEST - 25/11/2023
+						</div>
+						<div class="heading-name">
+							Mã bệnh nhân: 20232103, Bảo hiểm, Thành phố Hà Nội <span class="ms-2 fw-normal text-muted">(2000,
+							                                                                                           23
+							                                                                                           tuổi)</span>
+						</div>
+						<div class="heading-button ms-auto">
+							<div class="hstack gap-10px">
+								<a href="" class="button-theme button-theme_danger">
+									<img src="./assets/images/icons/icon-delete-white.png" class="img-fluid" alt="">
+									Bỏ khám
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="section-information">
+						<div class="section-tab">
+							<div class="nav nav-tabs mb-0 border-bottom-0" role="tablist">
+								<button class="nav-link m-0 text-black rounded-0 link-default"
+								        data-bs-toggle="tab"
+								        data-bs-target="#tab-thongtinbenhnhan" type="button">
+									Thông tin bệnh nhân
+								</button>
+								<button class="nav-link m-0 text-black rounded-0 link-default"
+								        data-bs-toggle="tab"
+								        data-bs-target="#tab-khambenh"
+								        type="button">
+									Khám bệnh
+								</button>
+								<button class="nav-link m-0 text-black rounded-0 link-default"
+								        data-bs-toggle="tab"
+								        data-bs-target="#tab-donthuoc"
+								        type="button">
+									Đơn thuốc
+								</button>
+								<button class="nav-link m-0 active text-black rounded-0 link-default"
+								        data-bs-toggle="tab"
+								        data-bs-target="#tab-dichvu"
+								        type="button">
+									Dịch vụ
+								</button>
+								<button class="nav-link m-0 text-black rounded-0 link-default"
+								        data-bs-toggle="tab"
+								        data-bs-target="#tab-thanhtoan"
+								        type="button">
+									Thanh toán
+								</button>
+								<button class="nav-link m-0 text-black rounded-0 link-default"
+								        data-bs-toggle="tab"
+								        data-bs-target="#tab-xutri"
+								        type="button">
+									Xử trí
+								</button>
+								<button class="nav-link m-0 text-black rounded-0 link-default"
+								        data-bs-toggle="tab"
+								        data-bs-target="#tab-benhan"
+								        type="button">
+									Bệnh án
+								</button>
+							</div>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade" id="tab-thongtinbenhnhan">
+							</div>
+							<div class="tab-pane fade" id="tab-khambenh">
+							</div>
+							<div class="tab-pane fade" id="tab-donthuoc">
+							</div>
+							<div class="tab-pane fade show active" id="tab-dichvu">
+							</div>
+							<div class="tab-pane fade" id="tab-thanhtoan">
+							</div>
+							<div class="tab-pane fade" id="tab-xutri">
+							</div>
+							<div class="tab-pane fade" id="tab-benhan">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section-footer">
+		<div class="container-fluid g-0">
+			<div class="row g-1 align-items-center flex-row-reverse flex-lg-row">
+				<div class="col-lg-6">
+					<div class="footer-text text-center text-lg-start">
+						Tổng cộng: <b>7500</b> dòng dữ liệu
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/dragscroll.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="./assets/js/app.js"></script>
+</body>
+</html>
