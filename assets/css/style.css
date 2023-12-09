@@ -1123,7 +1123,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 	gap: 5px;
 	border: 1px solid #d0d0d0;
 	padding: 2px;
-	min-height: 300px;
+	height: 30vh;
 }
 
 .nominate-card {
