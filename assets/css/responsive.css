@@ -244,6 +244,10 @@
 		flex-wrap: wrap;
 		width: auto;
 	}
+
+	.theme-table{
+		overflow-x: auto !important;
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -259,5 +263,17 @@
 
 	.section-pagination {
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.section-heading {
+		width: 100%;
+		flex-wrap: wrap;
+		gap: 5px;
+	}
+
+	.section-heading .heading-button {
+		margin-left: 0 !important;
 	}
 }

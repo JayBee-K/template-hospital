@@ -239,13 +239,6 @@ const handleInitDateRangePicker = function () {
 	})
 }
 
-const handleInitTableDraggable = function () {
-	if ($('.table-draggable').length) {
-		$('.table-draggable').each(function () {
-			$(this).draggable();
-		})
-	}
-}
 
 const handleToggleDisabledInput = function () {
 	if ($('.toggleDisabledInput').length) {
@@ -272,6 +265,5 @@ $(function () {
 	handleViewPass();
 	handleInitSelect2();
 	handleInitDateRangePicker();
-	handleInitTableDraggable();
 	handleToggleDisabledInput();
 });

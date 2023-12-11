@@ -657,6 +657,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 
 .theme-table.theme-table_height::-webkit-scrollbar {
     width: 5px;
+	height: 5px;
 }
 
 .theme-table.theme-table_height::-webkit-scrollbar-track {
@@ -883,6 +884,9 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
     margin-bottom: 0;
     position: relative;
     z-index: 2;
+	flex-wrap: nowrap;
+	overflow-y: hidden;
+	overflow-x: auto;
 }
 
 .section-tab .nav-tabs .nav-link {
@@ -895,6 +899,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
     border-bottom: 0;
     background: #f0f0f0;
     transition: .3s background ease;
+	white-space: nowrap;
 }
 
 .section-tab .nav-tabs .nav-link + .nav-link {
@@ -1173,4 +1178,8 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
     color: var(--bs-black);
     font-style: normal;
     line-height: 1.2;
+}
+
+.dragscroll {
+	cursor: pointer;
 }
