@@ -969,6 +969,18 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 	gap: 8px;
 }
 
+.patient-card.patient-card_1 {
+	background: rgba(0, 255, 13, 0.07);
+}
+
+.patient-card.patient-card_2 {
+	background: rgba(255, 9, 0, 0.05);
+}
+
+.patient-card.patient-card_3 {
+	background: rgba(255, 255, 0, 0.12);
+}
+
 .patient-card .card-icon {
 	width: 20px;
 	flex-shrink: 0;
