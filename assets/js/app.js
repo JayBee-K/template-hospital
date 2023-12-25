@@ -253,6 +253,38 @@ const handleToggleDisabledInput = function () {
 	}
 }
 
+const handleSetWidthColumnTable = function () {
+	if ($('.table-collapse').length) {
+		$('.table-collapse').each(function () {
+			const table = $(this);
+			table.find('thead th').each(function (index) {
+				let widthColumn = $(this)[0].scrollWidth;
+				$(table.find('.collapse tbody td')[index]).css("width", widthColumn);
+			})
+		});
+	}
+}
+
+const handleInitTree = function () {
+	if ($('#initTree').length > 0) {
+		let treeList = $('#initTree').children('ul'),
+			nodeList = treeList.children('li'),
+			lastList = treeList.children('li').last().height();
+		treeList.css('--set-height', treeList.height() - lastList + 'px');
+
+		nodeList.children('.expanded-tree').click(function () {
+			let nodeItem = $(this);
+			if (nodeItem.parent().hasClass('is-hide')) {
+				nodeItem.parent().removeClass('is-hide');
+				nodeItem.find('i').removeClass('fa-plus').addClass('fa-minus');
+			} else {
+				nodeItem.parent().addClass('is-hide');
+				nodeItem.find('i').removeClass('fa-minus').addClass('fa-plus');
+			}
+		});
+	}
+};
+
 $(function () {
 	handleApplyCollapse($('#header-navigation > ul'), true, true);
 	handleCallMenu();
@@ -266,4 +298,6 @@ $(function () {
 	handleInitSelect2();
 	handleInitDateRangePicker();
 	handleToggleDisabledInput();
+	handleSetWidthColumnTable();
+	handleInitTree();
 });

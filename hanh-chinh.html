@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>Template Cpanel Hospital</title>
+	<meta name="description" content="Template Cpanel Hospital">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Template Cpanel Hospital">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template Cpanel Hospital">
+	<meta property="og:image" content="">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
+	<link rel="stylesheet" href="./assets/plugins/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+	<link rel="stylesheet" href="./assets/css/responsive.css">
+
+	<style>
+		:root {
+			--primary-color: #00A2A5;
+			--primary-hover: #008588;
+			--primary-rgb: 0, 162, 165;
+			--secondary-color: #BB9A77;
+			--secondary-hover: #a27b51;
+			--secondary-rgb: 187, 154, 119;
+		}
+	</style>
+</head>
+<body>
+
+<header id="header" class="header">
+	<div class="container-fluid g-0">
+		<div class="header-main hstack gap-10px">
+			<div class="header-logo">
+				<a href="./" class="d-inline-block align-items-center">
+					<img src="./assets/images/logo.png" alt="">
+				</a>
+			</div>
+			<div id="header-navigation" class="header-navigation">
+				<ul>
+					<li>
+						<a class="active" href="./">
+							<span><img src="./assets/images/icons/trang-chu.png" class="img-fluid" alt=""></span>
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/don-tiep.png" class="img-fluid" alt=""></span>
+							Đón tiếp
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/kham-benh.png" class="img-fluid" alt=""></span>
+							Khám bệnh
+							<i class="fas fa-caret-down"></i>
+						</a>
+						<ul>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/lay-mau.png" class="img-fluid" alt=""></span>
+							Lấy máu
+							<i class="fas fa-caret-down"></i>
+						</a>
+						<ul>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Danh sách khám bệnh
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/xet-nghiem.png" class="img-fluid" alt=""></span>
+							Xét nghiệm
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/ris.png" class="img-fluid" alt=""></span>
+							RIS
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/benh-nhan.png" class="img-fluid" alt=""></span>
+							Bệnh nhân
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/dieu-tri.png" class="img-fluid" alt=""></span>
+							Điều trị
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/nha-thuoc.png" class="img-fluid" alt=""></span>
+							Nhà thuốc
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/kho-thuoc.png" class="img-fluid" alt=""></span>
+							Quản lý kho thuốc
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/danh-muc.png" class="img-fluid" alt=""></span>
+							Danh mục
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/thu-ngan.png" class="img-fluid" alt=""></span>
+							Thu ngân
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/bao-hiem.png" class="img-fluid" alt=""></span>
+							BHYT
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/bao-cao.png" class="img-fluid" alt=""></span>
+							Báo cáo
+						</a>
+					</li>
+					<li>
+						<a href="./">
+							<span><img src="./assets/images/icons/he-thong.png" class="img-fluid" alt=""></span>
+							Hệ thống
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="header-actions hstack gap-10px">
+				<div class="header-language header-dropdown">
+					<button type="button" class="link-default hstack gap-5px" data-bs-toggle="dropdown">
+						<img src="./assets/images/language/vn.png" class="img-fluid" alt="">
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/vn.png" class="img-fluid" alt="">
+								Tiếng Việt
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/en.png" class="img-fluid" alt="">
+								Tiếng Anh
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								<img src="./assets/images/language/cn.png" class="img-fluid" alt="">
+								Tiếng Trung
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-user header-dropdown">
+					<button type="button" class="link-default hstack gap-5px" data-bs-toggle="dropdown">
+						<img src="./assets/images/user/avatar.png" class="img-fluid" alt="">
+						Tài khoản
+						<i class="fas fa-caret-down"></i>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<a class="dropdown-item" href="#">
+								Đăng nhập
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Đăng ký
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Thông tin tài khoản
+							</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">
+								Đổi mật khẩu
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="header-hamburger">
+				<button type="button" class="hamburger-button" id="hamburger-button">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<div class="header-overlay" id="header-overlay"></div>
+		</div>
+	</div>
+</header>
+<div id="main" class="main">
+	<div class="section-buttons">
+		<div class="container-fluid g-0">
+			<div class="section-buttons_list hstack gap-15px justify-content-between">
+				<div class="section-buttons_list__item hstack gap-10px">
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-plus.png" class="img-fluid" alt="">
+						Thêm mới
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-list.png" class="img-fluid" alt="">
+						Danh sách
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-medical-appointment.png" class="img-fluid" alt="">
+						Hẹn khám
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-calendar.png" class="img-fluid" alt="">
+						Đặt lịch khám
+					</a>
+					<a href="" class="button-theme button-theme_light">
+						<img src="./assets/images/icons/icon-refresh.png" class="img-fluid" alt="">
+						Làm mới
+					</a>
+				</div>
+				<div class="section-buttons_list__item hstack gap-10px">
+					<div class="box-form">
+						<select name="" class="form-select theme-input" id="">
+							<option value="">Bình thường</option>
+							<option value="">Ưu tiên</option>
+						</select>
+					</div>
+					<div class="box-form">
+						<select name="" class="form-select theme-input" id="">
+							<option value="">A</option>
+							<option value="">B</option>
+							<option value="">C</option>
+							<option value="">D</option>
+						</select>
+					</div>
+					<div class="box-form">
+						<button type="button" class="button-theme button-theme_light">
+							<img src="./assets/images/icons/icon-loa.png" class="img-fluid" alt="">
+							Gọi số tiếp
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section-main section-checkup">
+		<div class="container-fluid g-0 vstack">
+			<div class="row g-2 g-xl-2 flex-fill flex-lg-row flex-column-reverse">
+				<div class="col-xl-20 vstack">
+					<div class="section-sidebar vstack">
+						<div class="section-tab vstack flex-fill">
+							<div class="tab-inner vstack flex-fill gap-5px">
+								<div class="theme-form">
+									<select data-placeholder-search="Tìm kiếm tên tỉnh/TP" name=""
+									        class="form-select theme-input theme-input_white initSelect2"
+									        id="">
+										<option value="">
+											Tất cả khoa
+										</option>
+										<option value="">
+											khoa 1
+										</option>
+										<option value="">
+											khoa 2
+										</option>
+										<option value="">
+											khoa 3
+										</option>
+										<option value="">
+											khoa 4
+										</option>
+										<option value="">
+											khoa 5
+										</option>
+										<option value="">
+											khoa 6
+										</option>
+										<option value="">
+											khoa 7
+										</option>
+										<option value="">
+											khoa 8
+										</option>
+										<option value="">
+											...
+										</option>
+									</select>
+								</div>
+								<div class="theme-tree" id="initTree">
+									<ul class="list-unstyled mb-0">
+										<li>
+											<a href="">Tất cả phiếu (55)</a>
+										</li>
+										<li>
+											<span class="expanded-tree">
+												<i class="fas fa-minus"></i>
+											</span>
+											<a href="">Loại phiếu</a>
+											<ul>
+												<li>
+													<a href="">Y lệnh (48)</a>
+												</li>
+												<li>
+													<a href="">Y lệnh (hoàn trả) (2)</a>
+												</li>
+												<li>
+													<a href="">Lĩnh hao phí khoa phòng (2)</a>
+												</li>
+												<li>
+													<a href="">Tổng hợp y lệnh (hoàn trả) (3)</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-80">
+					<div class="pt-1">
+						<div class="theme-form">
+							<div class="theme-form_button w-100">
+								<input placeholder="Tìm kiếm..." type="text" required=""
+								       class="form-control theme-input">
+								<button type="submit" class="button-theme button-theme_light">
+									<i class="fas fa-search"></i>
+								</button>
+							</div>
+						</div>
+						<div class="section-table w-100 m-0 mt-1">
+							<div class="theme-table theme-table_height dragscroll">
+								<table class="table table-bordered table-hover table-white align-middle">
+									<thead>
+									<tr>
+										<th class="table-column-maxw50"></th>
+										<th>Trạng Thái Phiếu</th>
+										<th>Trạng Thái Ký</th>
+										<th>Mã Phiếu</th>
+										<th>Mã Phiếu TH</th>
+										<th>Loại Phiếu</th>
+										<th>Mã BN</th>
+										<th>Tên Bệnh Nhân</th>
+										<th>Giới tính</th>
+										<th>NS</th>
+										<th>Ngày Chỉ Định</th>
+										<th>Ngày Chỉ Định</th>
+										<th>Ngày Chỉ Định</th>
+										<th>Ngày Chỉ Định</th>
+										<th>Ngày Chỉ Định</th>
+										<th>Ngày Chỉ Định</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr class="table-circle_2">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã nhập kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_3">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã tổng hợp YL
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td>397283</td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td>397283</td>
+										<td>Phạm Thị Huệ</td>
+										<td>Nữ</td>
+										<td>1991</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_4">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã gửi yêu cầu
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td>397283</td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td>397283</td>
+										<td>Phạm Thị Huệ</td>
+										<td>Nữ</td>
+										<td>1991</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_2">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã nhập kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_3">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã tổng hợp YL
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td>397283</td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td>397283</td>
+										<td>Phạm Thị Huệ</td>
+										<td>Nữ</td>
+										<td>1991</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_4">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã gửi yêu cầu
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td>397283</td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td>397283</td>
+										<td>Phạm Thị Huệ</td>
+										<td>Nữ</td>
+										<td>1991</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_2">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã nhập kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_3">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã tổng hợp YL
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td>397283</td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td>397283</td>
+										<td>Phạm Thị Huệ</td>
+										<td>Nữ</td>
+										<td>1991</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_1">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã xuất kho
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td></td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									<tr class="table-circle_4">
+										<td>
+											<div class="table-circle"></div>
+										</td>
+										<td>
+											Đã gửi yêu cầu
+										</td>
+										<td></td>
+										<td>397283</td>
+										<td>397283</td>
+										<td class="text-nowrap">
+											Tổng hợp y lệnh (hoàn trả)
+										</td>
+										<td>397283</td>
+										<td>Phạm Thị Huệ</td>
+										<td>Nữ</td>
+										<td>1991</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+										<td class="text-nowrap">
+											11:46 04/08/2023
+										</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/dragscroll.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/moment.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="./assets/js/app.js"></script>
+</body>
+</html>
