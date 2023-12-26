@@ -1249,7 +1249,8 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 }
 
 .section-information textarea.theme-input {
-	min-height: 93px;
+	min-height: 78px;
+	max-height: 78px;
 	line-height: 1.7;
 }
 

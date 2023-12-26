@@ -285,6 +285,21 @@ const handleInitTree = function () {
 	}
 };
 
+const handleSelectTypeForm = function () {
+	if ($("#selectTypeForm").length) {
+		$("#selectTypeForm").change(function () {
+			let value = $(this).val();
+			if (value == 'bh') {
+				$('#formBaoHiem').removeClass('d-none');
+				$('#formButtons').addClass('d-none');
+			} else {
+				$('#formBaoHiem').addClass('d-none');
+				$('#formButtons').removeClass('d-none');
+			}
+		});
+	}
+}
+
 $(function () {
 	handleApplyCollapse($('#header-navigation > ul'), true, true);
 	handleCallMenu();
@@ -300,4 +315,5 @@ $(function () {
 	handleToggleDisabledInput();
 	handleSetWidthColumnTable();
 	handleInitTree();
+	handleSelectTypeForm();
 });
