@@ -27,9 +27,9 @@
 
 	<style>
 		:root {
-			--primary-color: #00A2A5;
-			--primary-hover: #008588;
-			--primary-rgb: 0, 162, 165;
+			--primary-color: #015E70;
+			--primary-hover: #00708c;
+			--primary-rgb: 1, 94, 112;
 			--secondary-color: #BB9A77;
 			--secondary-hover: #a27b51;
 			--secondary-rgb: 187, 154, 119;
@@ -37,6 +37,335 @@
 	</style>
 </head>
 <body>
+
+<div class="modal fade modal-default" id="modal-Thuoc" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-title">
+					<img src="./assets/images/icons/icon-service.png" class="img-fluid" alt="">
+					Thêm thuốc
+				</div>
+				<button type="button" class="link-default fz-18" data-bs-dismiss="modal" aria-label="Close">
+					<i class="fal fa-times"></i>
+				</button>
+			</div>
+			<div class="modal-body p-0">
+				<div class="modal-form">
+					<div class="row g-3">
+						<div class="col-6 col-lg-4">
+							<div class="vstack gap-15px">
+								<div class="theme-form flex-wrap">
+									<div class="theme-label w-100">
+										Chọn kho
+									</div>
+									<div class="w-100">
+										<select data-placeholder-search="Tìm kiếm tên kho" name=""
+										        class="form-select theme-input theme-input_white initSelect2" id="">
+											<option value="">
+												Kho 1
+											</option>
+											<option value="">
+												Kho 1
+											</option>
+											<option value="">
+												Kho 1
+											</option>
+											<option value="">
+												Kho 1
+											</option>
+											<option value="">
+												Kho 1
+											</option>
+											<option value="">
+												Kho 1
+											</option>
+											<option value="">
+												Kho 1
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="theme-form flex-wrap">
+									<div class="theme-label w-100">
+										Chọn thuốc
+									</div>
+									<div class="w-100">
+										<select data-placeholder-search="Tìm kiếm tên thuốc" name=""
+										        class="form-select theme-input theme-input_white initSelect2" id="">
+											<option value="">
+												thuốc 1
+											</option>
+											<option value="">
+												thuốc 1
+											</option>
+											<option value="">
+												thuốc 1
+											</option>
+											<option value="">
+												thuốc 1
+											</option>
+											<option value="">
+												thuốc 1
+											</option>
+											<option value="">
+												thuốc 1
+											</option>
+											<option value="">
+												thuốc 1
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="theme-form flex-wrap">
+									<div class="theme-label w-100">
+										Số lượng
+									</div>
+									<div class="w-100">
+										<input type="text"
+										       class="form-control theme-input">
+									</div>
+								</div>
+								<div class="theme-form flex-wrap">
+									<div class="theme-label w-100">
+										Ngày y lệnh
+									</div>
+									<div class="w-100 theme-form_icon theme-form_calendar">
+										<input type="text" data-type="full"
+										       class="form-control theme-input initDateRangePicker">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-6 col-lg-8">
+							<div class="vstack gap-15px">
+								<div class="theme-form flex-wrap">
+									<div class="theme-label w-100">
+										Bệnh chính - ICD10
+										<button type="button"
+										        class="link-default text-blue fw-bold">
+											Cập nhật bệnh chính
+										</button>
+									</div>
+									<div class="w-100">
+										<div class="row g-2">
+											<div class="col-4">
+												<select data-placeholder-search="Tìm kiếm mã..."
+												        name=""
+												        class="form-select theme-input initSelect2"
+												        id="">
+													<option value="">
+														Bệnh ABC
+													</option>
+													<option value="">
+														Bệnh ABCD
+													</option>
+													<option value="">
+														Bệnh ABCDE
+													</option>
+													<option value="">
+														Bệnh ABCDEF
+													</option>
+													<option value="">
+														Bệnh ABCDEFG
+													</option>
+													<option value="">
+														Bệnh ABCDEFGH
+													</option>
+												</select>
+											</div>
+											<div class="col-8">
+												<div class="theme-form theme-form_column">
+													<input type="text"
+													       class="form-control theme-input"
+													       placeholder="">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="theme-form flex-wrap">
+									<div class="theme-label w-100">
+										Bệnh kèm theo - ICD10
+										<button type="button"
+										        class="link-default text-blue fw-bold gap-5px">
+											Cập nhật bệnh kèm theo
+											<img src="./assets/images/icons/icon-plus.png"
+											     class="img-fluid" alt="">
+										</button>
+									</div>
+									<div class="section-table w-100 m-0">
+										<div class="theme-table theme-table_height dragscroll"
+										     style="--height: 120px;">
+											<table class="table table-bordered table-hover">
+												<thead>
+												<tr>
+													<th class="table-column-maxw50"></th>
+													<th>Mã chẩn đoán</th>
+													<th>Tên chẩn đoán</th>
+													<th></th>
+												</tr>
+												</thead>
+												<tbody></tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="row g-3">
+									<div class="col-md-6">
+										<div class="theme-form flex-wrap theme-form_column">
+											<div class="theme-label w-100">
+												Hướng dẫn sử dụng
+											</div>
+											<textarea name="" id="" class="form-control theme-input"
+											          rows="4"></textarea>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="theme-form flex-wrap theme-form_column">
+											<div class="theme-label w-100">
+												Lời dặn
+											</div>
+											<textarea name="" id="" class="form-control theme-input"
+											          rows="4"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="hstack justify-content-lg-end justify-content-center gap-5px">
+								<button type="button" class="button-theme button-theme_primary">
+									<img src="./assets/images/icons/icon-add.png"
+									     class="img-fluid" alt="">
+									Thêm thuốc
+								</button>
+							</div>
+							<div class="section-table w-100 m-0">
+								<div class="theme-table theme-table_height dragscroll"
+								     style="--height: 20vh;">
+									<table class="table table-bordered table-hover">
+										<thead>
+										<tr>
+											<th class="table-column-maxw50"></th>
+											<th>Product Code</th>
+											<th>Product Name</th>
+											<th>Quantity</th>
+											<th>Unit</th>
+											<th>Usage</th>
+											<th>User Manual</th>
+											<th>Active</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td>
+												P00016
+											</td>
+											<td>
+												<div class="text-end table-text">
+													Thuốc ABC2
+												</div>
+											</td>
+											<td>
+												<div class="text-end table-text">
+													1000
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Viên
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Cách sử dụng ABC2
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Tester
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Lorem ipsum dolor sit amet.
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td>
+												P00016
+											</td>
+											<td>
+												<div class="text-end table-text">
+													Thuốc ABC2
+												</div>
+											</td>
+											<td>
+												<div class="text-end table-text">
+													1000
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Viên
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Cách sử dụng ABC2
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Tester
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Lorem ipsum dolor sit amet.
+												</div>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="box-buttons hstack justify-content-lg-end justify-content-center gap-5px pt-0"
+							     id="formButtons">
+								<button type="button" class="button-theme button-theme_primary">
+									<img src="./assets/images/icons/icon-save.png" class="img-fluid" alt="">
+									Lưu đơn
+								</button>
+								<button type="button" class="button-theme button-theme_secondary">
+									<img src="./assets/images/icons/icon-print.png" class="img-fluid" alt="">
+									Lưu + In
+								</button>
+								<button type="button" class="button-theme button-theme_light" data-bs-dismiss="modal">
+									<img src="./assets/images/icons/icon-times.png" class="img-fluid" alt="">
+									Hủy
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <header id="header" class="header">
 	<div class="container-fluid g-0">
@@ -390,7 +719,8 @@
 											<div class="scrollable-content">
 												<div class="vstack">
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_1 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_1 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-check-circle.png"
 																     alt="">
@@ -417,7 +747,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card hstack patient-card_2 rounded-0">
+														<a href=""
+														   class="card patient-card hstack patient-card_2 rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-times.png"
 																     alt="">
@@ -444,7 +775,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_3 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_3 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-minus.png"
 																     alt="">
@@ -471,7 +803,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_1 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_1 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-check-circle.png"
 																     alt="">
@@ -498,7 +831,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card hstack patient-card_2 rounded-0">
+														<a href=""
+														   class="card patient-card hstack patient-card_2 rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-times.png"
 																     alt="">
@@ -525,7 +859,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_3 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_3 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-minus.png"
 																     alt="">
@@ -552,7 +887,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_1 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_1 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-check-circle.png"
 																     alt="">
@@ -579,7 +915,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card hstack patient-card_2 rounded-0">
+														<a href=""
+														   class="card patient-card hstack patient-card_2 rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-times.png"
 																     alt="">
@@ -606,7 +943,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_3 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_3 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-minus.png"
 																     alt="">
@@ -995,12 +1333,13 @@
 										<div class="col-lg-9">
 											<div class="vstack gap-15px">
 												<div class="text-end">
-													<a href="" class="button-theme"
-													   style="--bg-1: var(--bs-primary); --bg-2: #084fb6">
+													<button type="button" data-bs-target="#modal-Thuoc"
+													        data-bs-toggle="modal"
+													        class="button-theme button-theme_blue">
 														<img src="./assets/images/icons/icon-edit.png" class="img-fluid"
 														     alt="">
 														Chỉ định thuốc, vật tư
-													</a>
+													</button>
 												</div>
 												<div class="row g-2">
 													<div class="col-lg-4">

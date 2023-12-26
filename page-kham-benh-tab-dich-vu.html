@@ -27,9 +27,9 @@
 
 	<style>
 		:root {
-			--primary-color: #00A2A5;
-			--primary-hover: #008588;
-			--primary-rgb: 0, 162, 165;
+			--primary-color: #015E70;
+			--primary-hover: #00708c;
+			--primary-rgb: 1, 94, 112;
 			--secondary-color: #BB9A77;
 			--secondary-hover: #a27b51;
 			--secondary-rgb: 187, 154, 119;
@@ -37,6 +37,931 @@
 	</style>
 </head>
 <body>
+
+<div class="modal fade modal-default" id="modal-DichVu" data-bs-backdrop="static" data-bs-keyboard="false">
+	<div class="modal-dialog modal-dialog-centered modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="modal-title">
+					<img src="./assets/images/icons/icon-service.png" class="img-fluid" alt="">
+					Chỉ định dịch vụ
+				</div>
+				<button type="button" class="link-default fz-18" data-bs-dismiss="modal" aria-label="Close">
+					<i class="fal fa-times"></i>
+				</button>
+			</div>
+			<div class="modal-body p-0">
+				<div class="row g-0">
+					<div class="col-lg-3 vstack">
+						<div class="section-sidebar pt-0 vstack">
+							<div class="section-tab vstack flex-fill">
+								<div class="tab-inner vstack flex-fill gap-5px">
+									<div class="theme-tree" id="initTree">
+										<ul class="list-unstyled mb-0">
+											<li>
+												<a href="">Tất cả dịch vụ (55)</a>
+											</li>
+											<li>
+												<span class="expanded-tree">
+													<i class="fas fa-minus"></i>
+												</span>
+												<a href="">Khám bệnh (3)</a>
+												<ul>
+													<li>
+														<a href="">Khám bệnh</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<span class="expanded-tree">
+													<i class="fas fa-minus"></i>
+												</span>
+												<a href="">Phân tích (24)</a>
+												<ul>
+													<li>
+														<a href="">XN Huyết học (2)</a>
+													</li>
+													<li>
+														<a href="">XN Sinh hóa (2)</a>
+													</li>
+													<li>
+														<a href="">XN Nước tiểu (2)</a>
+													</li>
+													<li>
+														<a href="">XN Phân (2)</a>
+													</li>
+													<li>
+														<a href="">Khác (20)</a>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<a href="">
+													Phẫu thuật - thủ thuật (0)
+												</a>
+											</li>
+											<li>
+												<span class="expanded-tree">
+													<i class="fas fa-minus"></i>
+												</span>
+												<a href="">Chẩn đoán hình ảnh - Thăm dò chức năng (9)</a>
+												<ul>
+													<li>
+														<a href="">X-Quang (2)</a>
+													</li>
+													<li>
+														<a href="">Siêu âm (4)</a>
+													</li>
+													<li>
+														<a href="">Nội soi (3)</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-9">
+						<div class="modal-form p-3">
+							<div class="row g-3">
+								<div class="col-12">
+									<div class="section-heading bg-transparent hstack gap-20px p-0 mb-0">
+										<div class="heading-title">
+											THÔNG TIN PHIẾU
+										</div>
+									</div>
+								</div>
+								<div class="col-6 col-lg-4">
+									<div class="vstack gap-15px">
+										<div class="theme-form">
+											<div class="row g-1 w-100">
+												<div class="col-6">
+													<label class="theme-checkbox">
+														<input type="radio" name="example-checkbox-2"
+														       checked
+														       class="visually-hidden">
+														<span>Thông thường</span>
+													</label>
+												</div>
+												<div class="col-6">
+													<label class="theme-checkbox">
+														<input type="radio" name="example-checkbox-2"
+														       class="visually-hidden">
+														<span>Cấp cứu</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="theme-form flex-wrap">
+											<div class="theme-label w-100">
+												Ngày y lệnh
+											</div>
+											<div class="w-100 theme-form_icon theme-form_calendar">
+												<input type="text" data-type="full"
+												       class="form-control theme-input initDateRangePicker">
+											</div>
+										</div>
+										<div class="theme-form flex-wrap">
+											<div class="theme-label w-100">
+												Người chỉ định
+											</div>
+											<div class="w-100">
+												<input type="text"
+												       class="form-control theme-input">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-6 col-lg-8">
+									<div class="vstack gap-15px">
+										<div class="theme-form flex-wrap">
+											<div class="theme-label w-100">
+												Bệnh chính - ICD10
+												<button type="button"
+												        class="link-default text-blue fw-bold">
+													Cập nhật bệnh chính
+												</button>
+											</div>
+											<div class="w-100">
+												<div class="row g-2">
+													<div class="col-4">
+														<select data-placeholder-search="Tìm kiếm mã..."
+														        name=""
+														        class="form-select theme-input initSelect2"
+														        id="">
+															<option value="">
+																Bệnh ABC
+															</option>
+															<option value="">
+																Bệnh ABCD
+															</option>
+															<option value="">
+																Bệnh ABCDE
+															</option>
+															<option value="">
+																Bệnh ABCDEF
+															</option>
+															<option value="">
+																Bệnh ABCDEFG
+															</option>
+															<option value="">
+																Bệnh ABCDEFGH
+															</option>
+														</select>
+													</div>
+													<div class="col-8">
+														<div class="theme-form theme-form_column">
+															<input type="text"
+															       class="form-control theme-input"
+															       placeholder="">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="theme-form flex-wrap">
+											<div class="theme-label w-100">
+												Bệnh kèm theo - ICD10
+												<button type="button"
+												        class="link-default text-blue fw-bold gap-5px">
+													Cập nhật bệnh kèm theo
+													<img src="./assets/images/icons/icon-plus.png"
+													     class="img-fluid" alt="">
+												</button>
+											</div>
+											<div class="section-table w-100 m-0">
+												<div class="theme-table theme-table_height dragscroll"
+												     style="--height: 120px;">
+													<table class="table table-bordered table-hover">
+														<thead>
+														<tr>
+															<th class="table-column-maxw50"></th>
+															<th>Mã chẩn đoán</th>
+															<th>Tên chẩn đoán</th>
+															<th></th>
+														</tr>
+														</thead>
+														<tbody></tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-wrapper">
+							<div class="section-heading bg-transparent hstack gap-20px mb-0 pe-3">
+								<div class="heading-title text-nowrap">
+									DANH SÁCH DỊCH VỤ
+								</div>
+								<div class="theme-form">
+									<input placeholder="Tìm kiếm tên/mã dịch vụ..." type="text"
+									       class="form-control theme-input">
+								</div>
+							</div>
+							<div class="section-table m-0 w-100">
+								<div class="theme-table dragscroll overflow-hidden">
+									<table class="table table-bordered table-hover table-white">
+										<thead>
+										<tr>
+											<th class="table-column-minw50">
+
+											</th>
+											<th class="table-column-minw50">
+
+											</th>
+											<th>
+												Mã dịch vụ
+											</th>
+											<th>
+												<div class="table-text">
+													Tên dịch vụ
+												</div>
+											</th>
+											<th>
+												Giá viện phí
+											</th>
+											<th>
+												Giá bảo hiểm
+											</th>
+											<th>
+												Giá dịch vụ
+											</th>
+											<th>
+												Đối tượng thanh toán
+											</th>
+											<th>
+												<div class="table-text">
+													Phòng khám
+												</div>
+											</th>
+											<th>
+												<div class="table-text">
+													Phòng lấy mẫu
+												</div>
+											</th>
+											<th>
+												<div class="table-text">
+													Phòng thực hiện
+												</div>
+											</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td class="table-column-minw50">
+												<label class="theme-checkbox text-center">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span></span>
+												</label>
+											</td>
+											<td>
+												KB
+											</td>
+											<td>
+												<div class="table-text">
+													Khám bệnh thông thường
+												</div>
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												350.000
+											</td>
+											<td>
+												Viện phí
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng khám 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng lấy mẫu 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng xét nghiệm 01
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td class="table-column-minw50">
+												<label class="theme-checkbox text-center">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span></span>
+												</label>
+											</td>
+											<td>
+												KB
+											</td>
+											<td>
+												<div class="table-text">
+													Khám bệnh thông thường
+												</div>
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												350.000
+											</td>
+											<td>
+												Viện phí
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng khám 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng lấy mẫu 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng xét nghiệm 01
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td class="table-column-minw50">
+												<label class="theme-checkbox text-center">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span></span>
+												</label>
+											</td>
+											<td>
+												KB
+											</td>
+											<td>
+												<div class="table-text">
+													Khám bệnh thông thường
+												</div>
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												350.000
+											</td>
+											<td>
+												Viện phí
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng khám 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng lấy mẫu 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng xét nghiệm 01
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td class="table-column-minw50">
+												<label class="theme-checkbox text-center">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span></span>
+												</label>
+											</td>
+											<td>
+												KB
+											</td>
+											<td>
+												<div class="table-text">
+													Khám bệnh thông thường
+												</div>
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												350.000
+											</td>
+											<td>
+												Viện phí
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng khám 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng lấy mẫu 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng xét nghiệm 01
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td class="table-column-minw50">
+												<label class="theme-checkbox text-center">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span></span>
+												</label>
+											</td>
+											<td>
+												KB
+											</td>
+											<td>
+												<div class="table-text">
+													Khám bệnh thông thường
+												</div>
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												350.000
+											</td>
+											<td>
+												Viện phí
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng khám 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng lấy mẫu 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng xét nghiệm 01
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td class="table-column-minw50">
+												<label class="theme-checkbox text-center">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span></span>
+												</label>
+											</td>
+											<td>
+												KB
+											</td>
+											<td>
+												<div class="table-text">
+													Khám bệnh thông thường
+												</div>
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												350.000
+											</td>
+											<td>
+												Viện phí
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng khám 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng lấy mẫu 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng xét nghiệm 01
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td class="table-column-minw50">
+												<label class="theme-checkbox text-center">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span></span>
+												</label>
+											</td>
+											<td>
+												KB
+											</td>
+											<td>
+												<div class="table-text">
+													Khám bệnh thông thường
+												</div>
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												350.000
+											</td>
+											<td>
+												Viện phí
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng khám 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng lấy mẫu 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng xét nghiệm 01
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td class="table-column-minw50">
+												<label class="theme-checkbox text-center">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span></span>
+												</label>
+											</td>
+											<td>
+												KB
+											</td>
+											<td>
+												<div class="table-text">
+													Khám bệnh thông thường
+												</div>
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												350.000
+											</td>
+											<td>
+												Viện phí
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng khám 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng lấy mẫu 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng xét nghiệm 01
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td class="table-column-minw50">
+												<label class="theme-checkbox text-center">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span></span>
+												</label>
+											</td>
+											<td>
+												KB
+											</td>
+											<td>
+												<div class="table-text">
+													Khám bệnh thông thường
+												</div>
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												350.000
+											</td>
+											<td>
+												Viện phí
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng khám 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng lấy mẫu 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng xét nghiệm 01
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="table-column-minw50">
+												<button class="link-default">
+													<i class="fas fa-caret-right"></i>
+												</button>
+											</td>
+											<td class="table-column-minw50">
+												<label class="theme-checkbox text-center">
+													<input type="checkbox" name="example-checkbox-2"
+													       class="visually-hidden">
+													<span></span>
+												</label>
+											</td>
+											<td>
+												KB
+											</td>
+											<td>
+												<div class="table-text">
+													Khám bệnh thông thường
+												</div>
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												150.000
+											</td>
+											<td>
+												350.000
+											</td>
+											<td>
+												Viện phí
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng khám 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng lấy mẫu 01
+												</div>
+											</td>
+											<td>
+												<div class="table-text">
+													Phòng xét nghiệm 01
+												</div>
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="section-pagination py-1">
+									<div class="theme-form">
+										<input placeholder="Trang" type="text" class="form-control theme-input">
+									</div>
+									<ul class="pagination justify-content-center justify-content-lg-end">
+										<li class="page-item disabled">
+											<a class="page-link" href="#">
+												<i class="fas fa-angle-double-left"></i>
+											</a>
+										</li>
+										<li class="page-item disabled">
+											<a class="page-link" href="#">
+												<i class="fas fa-angle-left"></i>
+											</a>
+										</li>
+										<li class="page-item active">
+											<a class="page-link" href="#">
+												1
+											</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">
+												2
+											</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">
+												3
+											</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">
+												<i class="fas fa-angle-right"></i>
+											</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">
+												<i class="fas fa-angle-double-right"></i>
+											</a>
+										</li>
+									</ul>
+									<div class="theme-form">
+										<select class="form-select theme-input theme-input_white" id="">
+											<option value="">
+												10
+											</option>
+											<option value="">
+												20
+											</option>
+											<option value="">
+												30
+											</option>
+											<option value="">
+												50
+											</option>
+											<option value="">
+												100
+											</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-wrapper">
+							<div class="section-heading bg-transparent hstack gap-20px mb-0 pe-3">
+								<div class="heading-title text-nowrap">
+									DANH SÁCH DỊCH VỤ ĐÃ CHỌN
+								</div>
+							</div>
+							<div class="section-table m-0 w-100">
+								<div class="theme-table theme-table_height dragscroll"
+								     style="--height: 15vh;">
+									<table class="table table-bordered table-hover table-white">
+										<thead>
+										<tr>
+											<th class="table-column-minw50">
+
+											</th>
+											<th class="table-column-minw50">
+
+											</th>
+											<th>
+												Mã dịch vụ
+											</th>
+											<th>
+												<div class="table-text">
+													Tên dịch vụ
+												</div>
+											</th>
+											<th>
+												<div class="table-text">
+													Phòng khám
+												</div>
+											</th>
+											<th>
+												<div class="table-text">
+													Phòng thực hiện
+												</div>
+											</th>
+											<th>
+												<div class="table-text">
+													Phòng lấy mẫu
+												</div>
+											</th>
+											<th>
+												Đối tượng thanh toán
+											</th>
+											<th>
+												Đơn vị
+											</th>
+											<th>
+												Số lượng
+											</th>
+											<th>
+												Đơn giá
+											</th>
+											<th>
+												Thành tiền
+											</th>
+											<th>
+												Mức hưởng
+											</th>
+											<th>
+												BHYT trả
+											</th>
+											<th>
+												Bệnh nhân trả
+											</th>
+										</tr>
+										</thead>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="section-heading bg-transparent hstack gap-20px mb-0">
+					<div class="heading-name text-nowrap me-5">
+						Tổng chi phí: <span class="text-danger">150.000VNĐ</span>
+					</div>
+					<div class="box-buttons hstack justify-content-lg-end justify-content-center gap-5px pt-0"
+					     id="formButtons">
+						<button type="button" class="button-theme button-theme_primary">
+							<img src="./assets/images/icons/icon-save.png" class="img-fluid" alt="">
+							Lưu
+						</button>
+						<button type="button" class="button-theme button-theme_light" data-bs-dismiss="modal">
+							<img src="./assets/images/icons/icon-times.png" class="img-fluid" alt="">
+							Hủy bỏ
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <header id="header" class="header">
 	<div class="container-fluid g-0">
@@ -390,7 +1315,8 @@
 											<div class="scrollable-content">
 												<div class="vstack">
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_1 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_1 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-check-circle.png"
 																     alt="">
@@ -417,7 +1343,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card hstack patient-card_2 rounded-0">
+														<a href=""
+														   class="card patient-card hstack patient-card_2 rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-times.png"
 																     alt="">
@@ -444,7 +1371,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_3 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_3 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-minus.png"
 																     alt="">
@@ -471,7 +1399,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_1 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_1 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-check-circle.png"
 																     alt="">
@@ -498,7 +1427,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card hstack patient-card_2 rounded-0">
+														<a href=""
+														   class="card patient-card hstack patient-card_2 rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-times.png"
 																     alt="">
@@ -525,7 +1455,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_3 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_3 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-minus.png"
 																     alt="">
@@ -552,7 +1483,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_1 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_1 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-check-circle.png"
 																     alt="">
@@ -579,7 +1511,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card hstack patient-card_2 rounded-0">
+														<a href=""
+														   class="card patient-card hstack patient-card_2 rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-times.png"
 																     alt="">
@@ -606,7 +1539,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_3 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_3 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-minus.png"
 																     alt="">
@@ -633,7 +1567,8 @@
 														</a>
 													</div>
 													<div class="list-item">
-														<a href="" class="card patient-card patient-card_5 hstack rounded-0">
+														<a href=""
+														   class="card patient-card patient-card_5 hstack rounded-0">
 															<div class="card-icon">
 																<img src="./assets/images/icons/icon-minus.png"
 																     alt="">
@@ -936,9 +1871,10 @@
 								<div class="information-body">
 									<div class="row g-2">
 										<div class="col-12">
-											<a href="" class="button-theme button-theme_primary button-theme_lg">
+											<button type="button" data-bs-target="#modal-DichVu" data-bs-toggle="modal"
+											        class="button-theme button-theme_primary button-theme_lg">
 												Chỉ định dịch vụ
-											</a>
+											</button>
 										</div>
 										<div class="col-lg-3">
 											<div class="vstack gap-10px">

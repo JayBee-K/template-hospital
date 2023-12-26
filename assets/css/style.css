@@ -43,7 +43,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .button-theme {
-	--position-y: -24px;
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
@@ -67,37 +66,52 @@ body::-webkit-scrollbar-thumb:hover {
 	transition: var(--transition-default);
 	height: 26px;
 	background-color: var(--bg-1);
-	background-image: -moz-linear-gradient(top, var(--bg-1), var(--bg-2));
-	background-image: -ms-linear-gradient(top, var(--bg-1), var(--bg-2));
-	background-image: -o-linear-gradient(top, var(--bg-1), var(--bg-2));
-	background-image: linear-gradient(top, var(--bg-1), var(--bg-2));
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, var(--bg-1)), color-stop(100%, var(--bg-2)));
-	background-image: -webkit-linear-gradient(top, var(--bg-1), var(--bg-2));
 }
 
 .button-theme.button-theme_light {
 	--bg-1: #dadada;
-	--bg-2: #dadada;
 	color: var(--bs-black) !important;
 	border-color: #aaaaaa;
 }
 
 .button-theme.button-theme_primary {
 	--bg-1: var(--primary-color);
-	--bg-2: var(--primary-color);
 	color: var(--bs-white) !important;
+}
+
+.button-theme.button-theme_primary:hover {
+	--bg-1: var(--primary-hover);
 }
 
 .button-theme.button-theme_secondary {
 	--bg-1: var(--secondary-color);
-	--bg-2: var(--secondary-color);
 	color: var(--bs-white) !important;
+}
+
+.button-theme.button-theme_secondary:hover {
+	--bg-1: var(--secondary-hover);
 }
 
 .button-theme.button-theme_danger {
 	--bg-1: var(--bs-danger);
-	--bg-2: var(--bs-danger);
 	color: var(--bs-white) !important;
+}
+
+.button-theme.button-theme_danger:hover {
+	--bg-1: #be2835;
+}
+
+.button-theme.button-theme_blue {
+	--bg-1: var(--bs-primary);
+	color: var(--bs-white) !important;
+}
+
+.button-theme.button-theme_blue:hover {
+	--bg-1: #084fb6;
+}
+
+.button-theme.button-theme_light:hover {
+	background: #c4c4c4;
 }
 
 .button-theme.button-theme_lg {
@@ -143,14 +157,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .button-theme.button-theme_transparent {
 	background: transparent !important;
-}
-
-.button-theme:hover {
-	background-position: center var(--position-y);
-}
-
-.button-theme.button-theme_light:hover {
-	background: #d0d0d0;
 }
 
 .link-default img,
@@ -566,8 +572,8 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 
 .theme-checkbox > span:before {
 	flex-shrink: 0;
-	width: 18px;
-	height: 18px;
+	width: 16px;
+	height: 16px;
 	content: "";
 	overflow: hidden;
 	border-radius: 2px;
@@ -964,6 +970,31 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 
 .modal-default .modal-form {
 	padding: 30px;
+}
+
+.modal-default .modal-wrapper {
+	border: 1px solid #d0d0d0;
+}
+
+.modal-default .modal-wrapper .theme-table .table thead tr:first-child > th,
+.modal-default .modal-wrapper .theme-table .table tbody tr:first-child > td {
+	border-top: 0;
+}
+
+.modal-default .modal-wrapper .theme-table .table thead tr > th:first-child,
+.modal-default .modal-wrapper .theme-table .table tbody tr > td:first-child {
+	border-left: 0;
+}
+
+.modal-default .modal-wrapper .theme-table .table thead tr > th:last-child,
+.modal-default .modal-wrapper .theme-table .table tbody tr > td:last-child {
+	border-right: 0;
+}
+
+
+.modal-default .modal-wrapper .theme-table .table thead tr:last-child > th,
+.modal-default .modal-wrapper .theme-table .table tbody tr:last-child > td {
+	border-bottom: 0;
 }
 
 .section-heading {
@@ -1366,7 +1397,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 	content: "";
 	display: block;
 	position: absolute;
-	top: 9px;
+	top: 13px;
 	bottom: 9px;
 	left: 7px;
 	width: 1px;
@@ -1384,7 +1415,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 	width: 20px;
 	background-color: #999;
 	left: 7px;
-	top: 9px;
+	top: 13px;
 	z-index: 1;
 }
 
@@ -1393,6 +1424,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 	display: block;
 	color: #1e2125;
 	font-size: 0.925em;
+	padding: 4px 0;
 }
 
 .theme-tree > ul > li > a {
@@ -1402,7 +1434,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 
 .theme-tree ul li > span {
 	position: absolute;
-	top: 1px;
+	top: 5px;
 	width: 16px;
 	height: 16px;
 	padding: 3px;
@@ -1433,7 +1465,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 	bottom: 9px;
 	left: 35px;
 	width: 1px;
-	height: calc(100% - 4px);
+	height: calc(100% - 9px);
 }
 
 .theme-tree > ul > li > ul > li:before {
@@ -1443,7 +1475,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 	width: 10px;
 	background-color: #999;
 	left: 35px;
-	top: 10px;
+	top: 13px;
 	z-index: 1;
 }
 

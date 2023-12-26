@@ -300,6 +300,16 @@ const handleSelectTypeForm = function () {
 	}
 }
 
+const handleModelDichVu = function () {
+	if ($('#modal-DichVu').length) {
+		$('#modal-DichVu').on('shown.bs.modal', function () {
+			let treeList = $('#modal-DichVu #initTree').children('ul'),
+				lastList = treeList.children('li').last().height();
+			treeList.css('--set-height', treeList.height() - lastList + 'px');
+		})
+	}
+}
+
 $(function () {
 	handleApplyCollapse($('#header-navigation > ul'), true, true);
 	handleCallMenu();
@@ -316,4 +326,5 @@ $(function () {
 	handleSetWidthColumnTable();
 	handleInitTree();
 	handleSelectTypeForm();
+	handleModelDichVu();
 });
