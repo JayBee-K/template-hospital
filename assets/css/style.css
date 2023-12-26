@@ -43,7 +43,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .button-theme {
-	--position-y: -26px;
+	--position-y: -24px;
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
@@ -65,7 +65,7 @@ body::-webkit-scrollbar-thumb:hover {
 	padding: 4px 10px;
 	font-weight: 500;
 	transition: var(--transition-default);
-	height: 28px;
+	height: 26px;
 	background-color: var(--bg-1);
 	background-image: -moz-linear-gradient(top, var(--bg-1), var(--bg-2));
 	background-image: -ms-linear-gradient(top, var(--bg-1), var(--bg-2));
@@ -84,19 +84,19 @@ body::-webkit-scrollbar-thumb:hover {
 
 .button-theme.button-theme_primary {
 	--bg-1: var(--primary-color);
-	--bg-2: var(--primary-hover);
+	--bg-2: var(--primary-color);
 	color: var(--bs-white) !important;
 }
 
 .button-theme.button-theme_secondary {
 	--bg-1: var(--secondary-color);
-	--bg-2: var(--secondary-hover);
+	--bg-2: var(--secondary-color);
 	color: var(--bs-white) !important;
 }
 
 .button-theme.button-theme_danger {
 	--bg-1: var(--bs-danger);
-	--bg-2: #ef4357;
+	--bg-2: var(--bs-danger);
 	color: var(--bs-white) !important;
 }
 
@@ -353,7 +353,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 input.theme-input,
 select.theme-input {
-	height: 28px;
+	height: 26px;
 	overflow: hidden;
 	white-space: nowrap;
 }
@@ -415,14 +415,14 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 	padding: 0;
 	font-weight: 500;
 	transition: var(--transition-default);
-	height: 28px;
+	height: 26px;
 	background: #e1e1e1;
 }
 
 .theme-input ~ .select2-container .select2-selection--single .select2-selection__rendered {
 	line-height: 1;
 	color: var(--bs-black);
-	padding: 7px 20px 7px 6px;
+	padding: 6px 20px 6px 6px;
 }
 
 .theme-input ~ .select2-container .select2-selection--single .select2-selection__arrow {
@@ -1089,6 +1089,10 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 	background: rgba(159, 159, 159, 0.12);
 }
 
+.patient-card:hover {
+	background: #f9f9f9 !important;
+}
+
 .patient-card .card-icon {
 	width: 20px;
 	flex-shrink: 0;
@@ -1111,7 +1115,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 }
 
 .patient-card .card-content {
-	max-width: calc(100% - 70px - 20px - 16px);
+	max-width: calc(100% - 60px - 20px - 16px);
 	line-height: 1.4;
 	overflow: hidden;
 	flex: 1 1 auto;
@@ -1150,7 +1154,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 	color: #868282;
 	font-size: 0.85em;
 	text-align: right;
-	width: 70px;
+	width: 60px;
 	flex-shrink: 0;
 }
 
@@ -1332,10 +1336,10 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 }
 
 .information-background {
-	background: #015E70;
+	background: #e0dede;
 	border-radius: 4px;
 	padding: 10px;
-	color: var(--bs-white);
+	border: 1px solid #9f9f9f;
 }
 
 .theme-tree {
