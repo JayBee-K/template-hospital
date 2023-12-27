@@ -1486,3 +1486,9 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 .theme-tree > ul > li.is-hide > ul {
 	display: none;
 }
+
+@media screen and (min-width: 1200px) {
+	.modal-large {
+		--bs-modal-width: 92%
+	}
+}
