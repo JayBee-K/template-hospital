@@ -6,7 +6,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-	width: 10px;
+	width: 8px;
 	height: 5px;
 	background-color: #F5F5F5;
 }
@@ -665,18 +665,26 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 
 .table-responsive::-webkit-scrollbar {
 	height: 5px;
+	background: #acacac;
 }
 
-.table-responsive::-webkit-scrollbar-track {
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar {
+	width: 5px;
+}
+
+.table-responsive::-webkit-scrollbar-track,
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-track {
 	background: #fff;
 }
 
-.table-responsive::-webkit-scrollbar-thumb {
+.table-responsive::-webkit-scrollbar-thumb,
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb {
 	background: #acacac;
 	border-radius: 5px;
 }
 
-.table-responsive::-webkit-scrollbar-thumb:hover {
+.table-responsive::-webkit-scrollbar-thumb:hover,
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb:hover {
 	background: #7b7b7b;
 }
 
@@ -697,7 +705,7 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 }
 
 .theme-table.theme-table_height::-webkit-scrollbar-thumb {
-	background: #acacac;
+	background: #d3d3d3;
 	border-radius: 5px;
 }
 
@@ -1489,6 +1497,6 @@ textarea.theme-input::-webkit-scrollbar-thumb:hover {
 
 @media screen and (min-width: 1200px) {
 	.modal-large {
-		--bs-modal-width: 92%
+		--bs-modal-width: 85%
 	}
 }
